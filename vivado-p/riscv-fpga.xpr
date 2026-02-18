@@ -57,7 +57,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="6"/>
+    <Option Name="WTXSimLaunchSim" Val="8"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -87,55 +87,43 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/RISCV-source/alu.v">
+      <File Path="$PPRDIR/../RISCV-source/alu.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../RISCV-source/alu.v"/>
-          <Attr Name="ImportTime" Val="1771371106"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/RISCV-source/controller.v">
+      <File Path="$PPRDIR/../RISCV-source/controller.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../RISCV-source/controller.v"/>
-          <Attr Name="ImportTime" Val="1771371106"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/RISCV-source/hazard_unit.v">
+      <File Path="$PPRDIR/../RISCV-source/hazard_unit.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../RISCV-source/hazard_unit.v"/>
-          <Attr Name="ImportTime" Val="1771371106"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/RISCV-source/register_file.v">
+      <File Path="$PPRDIR/../RISCV-source/register_file.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../RISCV-source/register_file.v"/>
-          <Attr Name="ImportTime" Val="1771371106"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/RISCV-source/sign_extender.v">
+      <File Path="$PPRDIR/../RISCV-source/sign_extender.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../RISCV-source/sign_extender.v"/>
-          <Attr Name="ImportTime" Val="1771371106"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/RISCV-source/rv_pl.v">
+      <File Path="$PPRDIR/../RISCV-source/rv_pl.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../RISCV-source/rv_pl.v"/>
-          <Attr Name="ImportTime" Val="1771374350"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
