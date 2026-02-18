@@ -1,0 +1,40 @@
+# ===============================
+# Vivado generated directories
+# ===============================
+vivado-p/*.cache/
+vivado-p/*.runs/
+vivado-p/*.sim/
+vivado-p/*.gen/
+vivado-p/*.hw/
+vivado-p/*.ip_user_files/
+vivado-p/*.tmp/
+vivado-p/.Xil/
+
+# Vivado logs
+vivado-p/*.log
+vivado-p/*.jou
+
+# ===============================
+# OS / Editor junk
+# ===============================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# ===============================
+# Python / Jupyter (if any)
+# ===============================
+__pycache__/
+.ipynb_checkpoints/
+
+# ===============================
+# Do NOT ignore important project files
+# (listed here as reminder)
+# ===============================
+# !vivado-p/riscv-fpga.xpr
+# !vivado-p/riscv-fpga.srcs/
+# !RISCV-source/
+# !testbench_v/

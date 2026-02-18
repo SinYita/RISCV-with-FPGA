@@ -1,8 +1,8 @@
-`include "alu.v"
-`include "controller.v"
-`include "hazard_unit.v"
-`include "register_file.v"
-`include "sign_extender.v"
+//`include "alu.v"
+//`include "controller.v"
+//`include "hazard_unit.v"
+//`include "register_file.v"
+//`include "sign_extender.v"
 
 
 module rv_pl (
@@ -65,7 +65,7 @@ module rv_pl (
   wire [1:0] ctrl_wb_sel;
   wire [2:0] ctrl_imm_sel;
   wire [3:0] ctrl_alu_ctrl;
-
+  
   reg WB_rf_we;
   reg [1:0] WB_wb_sel;
   reg [31:0] WB_Mem_Data, WB_ALU_Result, WB_PC_Plus4;
@@ -190,6 +190,8 @@ module rv_pl (
   assign dmem_wdata = done_write ? DONE_VALUE : MA_Write_Data;
 
   assign Mem_Read_Data = dmem_rdata;
+
+
 
   always @(posedge clk or negedge rst_n)
   begin
