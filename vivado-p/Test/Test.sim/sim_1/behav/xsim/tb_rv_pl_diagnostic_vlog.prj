@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Test.srcs/sources_1/imports/riscv-single" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/ALU.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/ALU_Decoder.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Controller.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Datapath.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Hazard_Unit.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Mux.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Op_Decoder.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Pipeline_top.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Register_File.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Sign_Extend.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/flops.v" \
+"../../../../Test.srcs/sim_1/new/tb_rv_pl.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

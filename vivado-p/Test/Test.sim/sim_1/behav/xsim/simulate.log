@@ -1,0 +1,111 @@
+Time resolution is 1 ps
+
+╔═══════════════════════════════════════════════════════╗
+║  RISC-V Pipeline Bubble Sort Test - FPGA Version     ║
+║  Testing: JAL, BEQ, LW, SW, SLT, and Control Logic  ║
+╚═══════════════════════════════════════════════════════╝
+
+[INFO] Reset released. Starting bubble sort of 10 numbers...
+
+[DMEM_WRITE] Addr: 0x00000064 <= Data: 0x00000040 (64)
+[DMEM_WRITE] Addr: 0x00000068 <= Data: 0x00000022 (34)
+[DMEM_WRITE] Addr: 0x0000006c <= Data: 0x00000019 (25)
+[DMEM_WRITE] Addr: 0x00000070 <= Data: 0x0000000c (12)
+[DMEM_WRITE] Addr: 0x00000074 <= Data: 0x00000016 (22)
+[DMEM_WRITE] Addr: 0x00000078 <= Data: 0x0000000b (11)
+[DMEM_WRITE] Addr: 0x0000007c <= Data: 0x00000038 (56)
+[DMEM_WRITE] Addr: 0x00000080 <= Data: 0x0000005a (90)
+[DMEM_WRITE] Addr: 0x00000084 <= Data: 0x0000004e (78)
+[DMEM_WRITE] Addr: 0x00000088 <= Data: 0x0000002d (45)
+[DMEM_WRITE] Addr: 0x00000064 <= Data: 0x00000022 (34)
+[DMEM_WRITE] Addr: 0x00000068 <= Data: 0x00000040 (64)
+[JUMP_TAKEN] Time: 525000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000068 <= Data: 0x00000019 (25)
+[DMEM_WRITE] Addr: 0x0000006c <= Data: 0x00000040 (64)
+[JUMP_TAKEN] Time: 675000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x0000006c <= Data: 0x0000000c (12)
+[DMEM_WRITE] Addr: 0x00000070 <= Data: 0x00000040 (64)
+[JUMP_TAKEN] Time: 825000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000070 <= Data: 0x00000016 (22)
+[DMEM_WRITE] Addr: 0x00000074 <= Data: 0x00000040 (64)
+[JUMP_TAKEN] Time: 975000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000074 <= Data: 0x0000000b (11)
+[DMEM_WRITE] Addr: 0x00000078 <= Data: 0x00000040 (64)
+[JUMP_TAKEN] Time: 1125000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000078 <= Data: 0x00000038 (56)
+[DMEM_WRITE] Addr: 0x0000007c <= Data: 0x00000040 (64)
+[JUMP_TAKEN] Time: 1275000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 1385000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 1425000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000080 <= Data: 0x0000004e (78)
+[DMEM_WRITE] Addr: 0x00000084 <= Data: 0x0000005a (90)
+[JUMP_TAKEN] Time: 1575000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000084 <= Data: 0x0000002d (45)
+[DMEM_WRITE] Addr: 0x00000088 <= Data: 0x0000005a (90)
+[JUMP_TAKEN] Time: 1725000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 1765000 | From PC: 0x00000074 | Target: 0x000000a0 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 1805000 | From PC: 0x000000a4 | Target: 0x00000060 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000064 <= Data: 0x00000019 (25)
+[DMEM_WRITE] Addr: 0x00000068 <= Data: 0x00000022 (34)
+[JUMP_TAKEN] Time: 1995000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000068 <= Data: 0x0000000c (12)
+[DMEM_WRITE] Addr: 0x0000006c <= Data: 0x00000022 (34)
+[JUMP_TAKEN] Time: 2145000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x0000006c <= Data: 0x00000016 (22)
+[DMEM_WRITE] Addr: 0x00000070 <= Data: 0x00000022 (34)
+[JUMP_TAKEN] Time: 2295000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000070 <= Data: 0x0000000b (11)
+[DMEM_WRITE] Addr: 0x00000074 <= Data: 0x00000022 (34)
+[JUMP_TAKEN] Time: 2445000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 2555000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 2595000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 2705000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 2745000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 2855000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 2895000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000080 <= Data: 0x0000002d (45)
+[DMEM_WRITE] Addr: 0x00000084 <= Data: 0x0000004e (78)
+[JUMP_TAKEN] Time: 3045000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 3085000 | From PC: 0x00000074 | Target: 0x000000a0 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 3125000 | From PC: 0x000000a4 | Target: 0x00000060 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000064 <= Data: 0x0000000c (12)
+[DMEM_WRITE] Addr: 0x00000068 <= Data: 0x00000019 (25)
+[JUMP_TAKEN] Time: 3315000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000068 <= Data: 0x00000016 (22)
+[DMEM_WRITE] Addr: 0x0000006c <= Data: 0x00000019 (25)
+[JUMP_TAKEN] Time: 3465000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x0000006c <= Data: 0x0000000b (11)
+[DMEM_WRITE] Addr: 0x00000070 <= Data: 0x00000019 (25)
+[JUMP_TAKEN] Time: 3615000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 3725000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 3765000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 3875000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 3915000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 4025000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 4065000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x0000007c <= Data: 0x0000002d (45)
+[DMEM_WRITE] Addr: 0x00000080 <= Data: 0x00000040 (64)
+[JUMP_TAKEN] Time: 4215000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 4255000 | From PC: 0x00000074 | Target: 0x000000a0 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 4295000 | From PC: 0x000000a4 | Target: 0x00000060 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 4445000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 4485000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000068 <= Data: 0x0000000b (11)
+[DMEM_WRITE] Addr: 0x0000006c <= Data: 0x00000016 (22)
+[JUMP_TAKEN] Time: 4635000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 4745000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 4785000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 4895000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 4935000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 5045000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 5085000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000078 <= Data: 0x0000002d (45)
+[DMEM_WRITE] Addr: 0x0000007c <= Data: 0x00000038 (56)
+[JUMP_TAKEN] Time: 5235000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 5275000 | From PC: 0x00000074 | Target: 0x000000a0 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 5315000 | From PC: 0x000000a4 | Target: 0x00000060 | Branch:0 Jump:1 Zero:1
+[DMEM_WRITE] Addr: 0x00000064 <= Data: 0x0000000b (11)
+[DMEM_WRITE] Addr: 0x00000068 <= Data: 0x0000000c (12)
+[JUMP_TAKEN] Time: 5505000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
+[JUMP_TAKEN] Time: 5615000 | From PC: 0x0000008c | Target: 0x00000098 | Branch:1 Jump:0 Zero:1
+[JUMP_TAKEN] Time: 5655000 | From PC: 0x0000009c | Target: 0x00000070 | Branch:0 Jump:1 Zero:1
