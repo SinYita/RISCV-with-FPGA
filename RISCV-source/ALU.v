@@ -1,30 +1,24 @@
-`include "define.v"
+module alu (
+    input [31:0] a, b,
+    input [3:0] alu_ctrl,
+    output reg [31:0] result,
+    output reg zero
+);
 
-module ALU(A, B, ALUControl, Result, Zero);
-   input  signed [31:0] A, B;
-   input         [3:0]  ALUControl;  
-   output Zero;  
-   
-   output reg [31:0] Result;
-       
-   always @(*) begin
-      case (ALUControl)
-      `ALU_ADD: Result = A + B;
-      `ALU_SUB: Result = A - B; 
-      `ALU_XOR: Result = A ^ B;
-      `ALU_OR:  Result = A | B;
-      `ALU_AND: Result = A & B;
-      `ALU_SHIFTL: Result = A << B[4:0]; 
-      `ALU_SHIFTR: Result = A >> B[4:0];  
-      `ALU_SHIFTR_ARITH: Result = A >>> B[4:0];  
-      `ALU_LESS_THAN_SIGNED: Result = ($signed(A) < $signed(B)) ? 32'b1 : 32'b0;  // SLT
-      `ALU_LESS_THAN: Result = ($unsigned(A) < $unsigned(B)) ? 32'b1 : 32'b0;  // SLTU
-      
-      `ALU_NONE: Result = A;  // Pass through A
-      default: Result = A;
-      endcase
-   end 
-   
-   assign Zero = (Result == 32'b0);  
-
+    always @(*) begin
+        case (alu_ctrl)
+            4'h0: result = a + b;
+            4'h1: result = a - b;
+            4'h2: result = a << b[4:0];
+            4'h3: result = ($signed(a) < $signed(b)) ? 32'd1 : 32'd0;
+            4'h4: result = (a < b) ? 32'd1 : 32'd0;
+            4'h5: result = a ^ b;
+            4'h6: result = a >> b[4:0];
+            4'h7: result = $signed(a) >>> b[4:0];
+            4'h8: result = a | b;
+            4'h9: result = a & b;
+            default: result = 32'b0;
+        endcase
+        zero = (result == 0);
+    end
 endmodule
