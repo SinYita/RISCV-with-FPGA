@@ -1,0 +1,224 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Feb 20 02:05:29 2026
+# Process ID: 26544
+# Current directory: D:/FPGA/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1
+# Command line: vivado.exe -log rv_pl.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source rv_pl.tcl -notrace
+# Log file: D:/FPGA/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1/rv_pl.vdi
+# Journal file: D:/FPGA/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1\vivado.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34193 MB
+#-----------------------------------------------------------
+source rv_pl.tcl -notrace
+Command: link_design -top rv_pl -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1253.645 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 391 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1253.645 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1253.645 ; gain = 0.000
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.885 . Memory (MB): peak = 1253.645 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: ea40f148
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1440.254 ; gain = 186.609
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/i__carry__1_i_5 into driver instance datapath_inst/Rs1Eflopclr/i__carry__1_i_9, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/i__carry__2_i_5__0 into driver instance datapath_inst/Rs1Eflopclr/i__carry__2_i_9, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/i__carry__2_i_7 into driver instance datapath_inst/Rs1Eflopclr/i__carry__2_i_11, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[19]_i_25 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__1_i_14, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[19]_i_26 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__1_i_13, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[19]_i_27 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__1_i_16, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[19]_i_28 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__1_i_15, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[23]_i_13 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__1_i_10, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[23]_i_14 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__1_i_9, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[23]_i_15 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__1_i_12, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[23]_i_16 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__1_i_11, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[27]_i_20 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__2_i_13, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[27]_i_21 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__2_i_12, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[27]_i_22 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__2_i_15, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[27]_i_23 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__2_i_14, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[31]_i_21 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__2_i_9, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[31]_i_22 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__2_i_11, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter datapath_inst/Rs1Eflopclr/q[31]_i_23 into driver instance datapath_inst/Rs1Eflopclr/res2_carry__2_i_10, which resulted in an inversion of 3 pins
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 992 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: c3844f26
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 1738.613 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 19 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 5dfa6ee6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.186 . Memory (MB): peak = 1738.613 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 8c13f73d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.229 . Memory (MB): peak = 1738.613 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 33 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 8c13f73d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.266 . Memory (MB): peak = 1738.613 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 8c13f73d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.271 . Memory (MB): peak = 1738.613 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 87b74013
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.280 . Memory (MB): peak = 1738.613 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              19  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |              33  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1738.613 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 120e0d860
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.309 . Memory (MB): peak = 1738.613 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 120e0d860
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1738.613 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 120e0d860
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1738.613 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1738.613 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 120e0d860
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1738.613 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+41 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1738.613 ; gain = 484.969
+INFO: [Common 17-1381] The checkpoint 'D:/FPGA/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1/rv_pl_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file rv_pl_drc_opted.rpt -pb rv_pl_drc_opted.pb -rpx rv_pl_drc_opted.rpx
+Command: report_drc -file rv_pl_drc_opted.rpt -pb rv_pl_drc_opted.pb -rpx rv_pl_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.2/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/FPGA/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1/rv_pl_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1779.758 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 69f0509e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1779.758 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1779.758 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced IO Ports (163) is greater than number of available sites (125).
+The following are banks with available pins: 
+Resolution: Consider using Xilinx part with greater number of IO pins
+ERROR: [Place 30-374] IO placer failed to find a solution
+Below is the partial placement that can be analyzed to see if any constraint modifications will make the IO placement problem easier to solve.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     IO Placement : Bank Stats                                                                           |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+| Id | Pins  | Terms |                               Standards                                |                IDelayCtrls               |  VREF  |  VCCO  |   VR   | DCI |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|  0 |     0 |     0 |                                                                        |                                          |        |        |        |     |
+| 13 |    25 |     0 |                                                                        |                                          |        |        |        |     |
+| 34 |    50 |     0 |                                                                        |                                          |        |        |        |     |
+| 35 |    50 |     0 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|    |   125 |     0 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+
+IO Placement:
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| BankId |             Terminal | Standard        | Site                 | Pin                  | Attributes           |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 56834ad3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.441 . Memory (MB): peak = 1779.758 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 56834ad3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.442 . Memory (MB): peak = 1779.758 ; gain = 0.000
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 56834ad3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.443 . Memory (MB): peak = 1779.758 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+58 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 20 02:05:56 2026...

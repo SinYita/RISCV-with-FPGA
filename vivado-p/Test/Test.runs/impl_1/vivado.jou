@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Feb 20 02:05:29 2026
+# Process ID: 26544
+# Current directory: D:/FPGA/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1
+# Command line: vivado.exe -log rv_pl.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source rv_pl.tcl -notrace
+# Log file: D:/FPGA/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1/rv_pl.vdi
+# Journal file: D:/FPGA/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1\vivado.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34193 MB
+#-----------------------------------------------------------
+source rv_pl.tcl -notrace
