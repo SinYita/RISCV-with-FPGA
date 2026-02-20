@@ -74,8 +74,8 @@ bubble_sort_code = [
 ]
 
 # after loading instructions
-print("IMEM[0] written =", hex(bubble_sort_code[0]))
-print("IMEM[0] readback =", hex(inst_mmio.read(0)))
+# print("IMEM[0] written =", hex(bubble_sort_code[0]))
+# print("IMEM[0] readback =", hex(inst_mmio.read(0)))
 
 # write a marker into DMEM and read back
 data_mmio.write(0x100, 0x12345678)
@@ -98,17 +98,27 @@ EXPECTED_A = [1, 2, 3, 4, 5, 7, 8, 9]
 
 
 def run_mode_A(timeout=2.0):
-    # 1) reset core (clears 'done' reg inside rv_pl)
-    reset_pulse()
+    # 0) hold core in reset FIRST
+    set_reset_n(0)
+    time.sleep(0.01)
 
-    # 2) clear software done flag
+    # 1) clear software done flag
     data_mmio.write(DONE_OFF, 0x0)
 
-    # 3) load program
+    # 2) load program while core is held reset
     for i, w in enumerate(bubble_sort_code):
         inst_mmio.write(i*4, w)
 
-    # 4) start: release reset already done by reset_pulse()
+    # 3) readback a few words to confirm IMEM write
+    print("IMEM[0] expect", hex(bubble_sort_code[0]),
+          "got", hex(inst_mmio.read(0)))
+    print("IMEM[4] expect", hex(bubble_sort_code[1]),
+          "got", hex(inst_mmio.read(4)))
+
+    # 4) release reset and run
+    set_reset_n(1)
+    time.sleep(0.002)
+
     start = time.time()
     while (time.time() - start) < timeout:
         flag = data_mmio.read(DONE_OFF)
@@ -121,7 +131,6 @@ def run_mode_A(timeout=2.0):
         print(
             f"[TIMEOUT] Mem={hex(data_mmio.read(DONE_OFF))} HW={read_hw_done()}")
 
-    # 5) read first 8 words
     result = [data_mmio.read(i*4) for i in range(8)]
     print("Result[0..7] =", result)
     print("Expect      =", EXPECTED_A)
