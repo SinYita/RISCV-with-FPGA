@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1'
+HD_PWD='/u/halle/dwe/home_at/Desktop/RISCV-with-FPGA/vivado-p/Test/Test.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

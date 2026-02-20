@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="go69jib" Host="halle.cli.ito.cit.tum.de" Pid="4146256" HostCore="128" HostMemory="791727792">
-    </Process>
-</ProcessHandle>

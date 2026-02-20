@@ -36,7 +36,7 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
-    <File Path="$PPRDIR/../../Test/Test.srcs/utils_1/imports/synth_1/rv_pl.dcp">
+    <File Path="$PPRDIR/../../../../Test/Test.srcs/utils_1/imports/synth_1/rv_pl.dcp">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

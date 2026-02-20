@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
-//Date        : Fri Feb 20 17:42:31 2026
+//Date        : Fri Feb 20 19:03:19 2026
 //Host        : halle.cli.ito.cit.tum.de running 64-bit Ubuntu 24.04.2 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=42,da_board_cnt=4,da_bram_cntlr_cnt=18,da_ps7_cnt=5,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=42,da_board_cnt=5,da_bram_cntlr_cnt=18,da_ps7_cnt=5,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -84,6 +84,7 @@ module design_1
   wire axi_bram_ctrl_1_BRAM_PORTB_EN;
   wire axi_bram_ctrl_1_BRAM_PORTB_RST;
   wire [3:0]axi_bram_ctrl_1_BRAM_PORTB_WE;
+  wire [0:0]axi_gpio_0_gpio2_io_o;
   wire [12:0]axi_smc_M00_AXI_ARADDR;
   wire [1:0]axi_smc_M00_AXI_ARBURST;
   wire [3:0]axi_smc_M00_AXI_ARCACHE;
@@ -224,7 +225,6 @@ module design_1
   wire processing_system7_0_M_AXI_GP0_WREADY;
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
-  wire [0:0]rst_ps7_0_50M_interconnect_aresetn;
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
   wire rv_pl_0_done;
   wire [31:0]rv_pl_0_m_data_axi_ARADDR;
@@ -369,7 +369,8 @@ module design_1
         .wea(axi_bram_ctrl_1_BRAM_PORTA_WE),
         .web(axi_bram_ctrl_1_BRAM_PORTB_WE));
   design_1_axi_gpio_0_1 axi_gpio_0
-       (.gpio_io_i(rv_pl_0_done),
+       (.gpio2_io_o(axi_gpio_0_gpio2_io_o),
+        .gpio_io_i(rv_pl_0_done),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_smc_M02_AXI_ARADDR),
         .s_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
@@ -620,7 +621,6 @@ module design_1
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),
         .ext_reset_in(processing_system7_0_FCLK_RESET0_N),
-        .interconnect_aresetn(rst_ps7_0_50M_interconnect_aresetn),
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_50M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
@@ -651,5 +651,5 @@ module design_1
         .m_inst_axi_rready(rv_pl_0_m_inst_axi_RREADY),
         .m_inst_axi_rresp(rv_pl_0_m_inst_axi_RRESP),
         .m_inst_axi_rvalid(rv_pl_0_m_inst_axi_RVALID),
-        .rst_n(rst_ps7_0_50M_interconnect_aresetn));
+        .rst_n(axi_gpio_0_gpio2_io_o));
 endmodule

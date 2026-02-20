@@ -488,7 +488,16 @@
           "C_ALL_INPUTS": {
             "value": "1"
           },
+          "C_ALL_OUTPUTS_2": {
+            "value": "1"
+          },
+          "C_GPIO2_WIDTH": {
+            "value": "1"
+          },
           "C_GPIO_WIDTH": {
+            "value": "1"
+          },
+          "C_IS_DUAL": {
             "value": "1"
           }
         }
@@ -625,6 +634,12 @@
       }
     },
     "nets": {
+      "axi_gpio_0_gpio2_io_o": {
+        "ports": [
+          "axi_gpio_0/gpio2_io_o",
+          "rv_pl_0/rst_n"
+        ]
+      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
@@ -641,12 +656,6 @@
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "rst_ps7_0_50M/ext_reset_in"
-        ]
-      },
-      "rst_ps7_0_50M_interconnect_aresetn": {
-        "ports": [
-          "rst_ps7_0_50M/interconnect_aresetn",
-          "rv_pl_0/rst_n"
         ]
       },
       "rst_ps7_0_50M_peripheral_aresetn": {
