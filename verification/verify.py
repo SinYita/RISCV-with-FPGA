@@ -1,6 +1,5 @@
 from pynq import Overlay, MMIO
 import time
-import random
 
 # -----------------------------
 # Address map
@@ -15,7 +14,7 @@ DMEM_SIZE = 0x2000
 DONE_OFF = 0x1FFC
 DONE_ADDR = DATA_BASE + DONE_OFF
 
-# AXI GPIO regs
+# AXI GPIO regs (Xilinx AXI GPIO)
 GPIO_DATA = 0x0
 GPIO_TRI = 0x4
 GPIO_DATA2 = 0x8
@@ -31,192 +30,152 @@ data_mmio = MMIO(DATA_BASE, DMEM_SIZE)
 gpio_mmio = MMIO(GPIO_BASE, 0x10)
 
 # -----------------------------
-# GPIO setup:
-# ch1 input (done), ch2 output (rst_n control)
+# GPIO setup: ch1 input(done), ch2 output(rst_n)
 # -----------------------------
 gpio_mmio.write(GPIO_TRI,  0xFFFF_FFFF)  # ch1 input
 gpio_mmio.write(GPIO_TRI2, 0x0000_0000)  # ch2 output
+
+
+def set_reset_n(val: int):
+    gpio_mmio.write(GPIO_DATA2, val & 0x1)
 
 
 def read_hw_done():
     return gpio_mmio.read(GPIO_DATA) & 0x1
 
 
-def set_reset_n(val: int):
-    # val=0 => reset asserted (active-low)
-    # val=1 => release reset
-    gpio_mmio.write(GPIO_DATA2, val & 0x1)
-
-
-def reset_pulse(hold_s=0.01):
-    # assert reset (rst_n=0), then release (rst_n=1)
+def hold_reset(t=0.01):
     set_reset_n(0)
-    time.sleep(hold_s)
+    time.sleep(t)
+
+
+def release_reset(t=0.005):
     set_reset_n(1)
-    time.sleep(0.002)  # settle
+    time.sleep(t)
+
+
+def load_imem(words):
+    # Load program into IMEM while core is in reset
+    for i, w in enumerate(words):
+        inst_mmio.write(i * 4, w)
+
+
+def imem_readback(n_words=4):
+    out = []
+    for i in range(n_words):
+        out.append(inst_mmio.read(i * 4))
+    return out
+
+
+def dmem_read32(off):
+    return data_mmio.read(off)
+
+
+def dmem_write32(off, val):
+    data_mmio.write(off, val)
+
+
+def scan_dmem_for(value, max_hits=10):
+    hits = []
+    for i in range(DMEM_SIZE // 4):
+        if data_mmio.read(i * 4) == value:
+            hits.append(i * 4)
+            if len(hits) >= max_hits:
+                break
+    return hits
 
 
 # -----------------------------
-# Program words (use ONE source of truth)
-# 你應該用你 hex dump 那份，避免不一致
+# Mini programs (RV32I, little-endian word list)
 # -----------------------------
-bubble_sort_code = [
-    0x42000437, 0x00700293, 0x00542023, 0x00300293,
-    0x00542223, 0x00500293, 0x00542423, 0x00200293,
-    0x00542623, 0x00900293, 0x00542823, 0x00100293,
-    0x00542A23, 0x00800293, 0x00542C23, 0x00400293,
-    0x00542E23, 0x00700493, 0x02048E63, 0x00900933,
-    0x008009B3, 0x02090463, 0x0009A283, 0x0049A303,
-    0x005323B3, 0x00038663, 0x0069A023, 0x0059A223,
-    0x00498993, 0xFFF90913, 0xFDDFF06F, 0xFFF48493,
-    0xFC9FF06F, 0x42002E37, 0xFFCE0E13, 0xDEADCEB7,
-    0xEEFE8E93, 0x01DE2023, 0x0000006F
-]
-
-mini_done_code = [
-    0x42002E37,  # lui  t3,0x42002
-    0xFFCE0E13,  # addi t3,t3,-4   => 0x42001FFC
-    0xDEADCEB7,  # lui  t4,0xDEADC
-    0xEEFE8E93,  # addi t4,t4,-0x111 => 0xDEADBEEF
-    0x01DE2023,  # sw   t4,0(t3)
-    0x0000006F,  # jal  x0,0
-]
-
+# CPU writes 0x11111111 to DATA_BASE + 0x0, then loops
 mini_data0_code = [
-    0x42000437,  # lui  s0,0x42000  -> s0=0x42000000
-    0x111112B7,  # lui  t0,0x11111  -> t0=0x11111000
-    0x11128293,  # addi t0,t0,0x111 -> t0=0x11111111
+    0x42000437,  # lui  s0,0x42000       s0=0x42000000
+    0x111112B7,  # lui  t0,0x11111       t0=0x11111000
+    0x11128293,  # addi t0,t0,0x111      t0=0x11111111
     0x00542023,  # sw   t0,0(s0)
     0x0000006F,  # jal  x0,0
 ]
 
-# after loading instructions
-# print("IMEM[0] written =", hex(bubble_sort_code[0]))
-# print("IMEM[0] readback =", hex(inst_mmio.read(0)))
-
-# write a marker into DMEM and read back
-data_mmio.write(0x100, 0x12345678)
-print("DMEM[0x100] readback =", hex(data_mmio.read(0x100)))
-
-GPIO_DATA2 = 0x8
-GPIO_TRI2 = 0xC
-
-gpio_mmio.write(GPIO_TRI2, 0x0)   # output
-gpio_mmio.write(GPIO_DATA2, 0x0)
-print("GPIO2=0 readback:", hex(gpio_mmio.read(GPIO_DATA2)))
-
-gpio_mmio.write(GPIO_DATA2, 0x1)
-print("GPIO2=1 readback:", hex(gpio_mmio.read(GPIO_DATA2)))
+# CPU writes 0xDEADBEEF to DATA_BASE + 0x1FFC, then loops
+mini_done_code = [
+    0x42002E37,  # lui  t3,0x42002       t3=0x42002000
+    0xFFCE0E13,  # addi t3,t3,-4         t3=0x42001FFC
+    0xDEADCEB7,  # lui  t4,0xDEADC       t4=0xDEADC000
+    0xEEFE8E93,  # addi t4,t4,-0x111     t4=0xDEADBEEF
+    0x01DE2023,  # sw   t4,0(t3)
+    0x0000006F,  # jal  x0,0
+]
 
 # -----------------------------
-# MODE A: 跑你現在的 assembly（固定 8 個元素）
+# Step 0: PS path sanity
 # -----------------------------
-EXPECTED_A = [1, 2, 3, 4, 5, 7, 8, 9]
+print("=== PS->DMEM sanity ===")
+dmem_write32(0x100, 0x12345678)
+print("DMEM[0x100] readback =", hex(dmem_read32(0x100)))
+
+print("\n=== GPIO sanity ===")
+hold_reset(0.01)
+print("GPIO2 rst_n drive (should be 0):", gpio_mmio.read(GPIO_DATA2) & 1)
+release_reset(0.01)
+print("GPIO2 rst_n drive (should be 1):", gpio_mmio.read(GPIO_DATA2) & 1)
+print("GPIO1 done input =", read_hw_done())
+
+# -----------------------------
+# Helper to run a mini program and check effects
+# -----------------------------
 
 
-def run_mode_A(timeout=2.0):
-    # 0) hold core in reset FIRST
-    set_reset_n(0)
-    time.sleep(0.01)
+def run_mini(name, program_words, wait_s=0.05):
+    print(f"\n=== RUN: {name} ===")
 
-    # 1) clear software done flag
-    data_mmio.write(DONE_OFF, 0x0)
+    # 1) Hold reset so CPU doesn't execute while we load IMEM
+    hold_reset(0.02)
 
-    # 2) load program while core is held reset
-    for i, w in enumerate(bubble_sort_code):
-        inst_mmio.write(i*4, w)
+    # 2) Load program
+    load_imem(program_words)
 
-    # 3) readback a few words to confirm IMEM write
-    print("IMEM[0] expect", hex(bubble_sort_code[0]),
-          "got", hex(inst_mmio.read(0)))
-    print("IMEM[4] expect", hex(bubble_sort_code[1]),
-          "got", hex(inst_mmio.read(4)))
+    # 3) IMEM readback check
+    rb = imem_readback(min(4, len(program_words)))
+    print("IMEM readback:", [hex(x) for x in rb])
 
-    # 4) release reset and run
-    set_reset_n(1)
-    time.sleep(0.002)
+    # 4) Release reset to run
+    release_reset(0.005)
 
-    start = time.time()
-    while (time.time() - start) < timeout:
-        flag = data_mmio.read(DONE_OFF)
-        hw = read_hw_done()
-        if flag == 0xDEADBEEF or hw == 1:
-            print(f"[DONE] Mem={hex(flag)} HW={hw} t={time.time()-start:.4f}s")
-            break
-        time.sleep(0.005)
-    else:
-        print(
-            f"[TIMEOUT] Mem={hex(data_mmio.read(DONE_OFF))} HW={read_hw_done()}")
-
-    result = [data_mmio.read(i*4) for i in range(8)]
-    print("Result[0..7] =", result)
-    print("Expect      =", EXPECTED_A)
-    print("PASS" if result == EXPECTED_A else "FAIL")
-
-
-def run_mini_done(timeout=1.0):
-    set_reset_n(0)
-    time.sleep(0.01)
-
-    data_mmio.write(DONE_OFF, 0x0)
-
-    for i, w in enumerate(mini_done_code):
-        inst_mmio.write(i*4, w)
-
-    # readback confirm
-    print("IMEM[0] got", hex(inst_mmio.read(0)))
-
-    set_reset_n(1)
-    time.sleep(0.005)
-
-    start = time.time()
-    while time.time() - start < timeout:
-        flag = data_mmio.read(DONE_OFF)
-        if flag == 0xDEADBEEF:
-            print("[PASS] mini done store works:", hex(flag))
-            return
-        time.sleep(0.01)
-
-    print("[FAIL] mini done store not observed, flag=",
-          hex(data_mmio.read(DONE_OFF)))
+    # 5) Wait a bit
+    time.sleep(wait_s)
 
 
 # -----------------------------
-# MODE B: 若你改了 assembly 支援 Python 寫入的 N=32
-# (只有當你的程式不會再覆蓋 data 且確實排序 32 個才用)
+# Test 1: CPU writes DMEM[0]
 # -----------------------------
-def run_mode_B(timeout=2.0, n=32):
-    reset_pulse()
+# Clear DMEM[0] first so we see change
+hold_reset(0.01)
+dmem_write32(0x0, 0x0)
+release_reset(0.001)
 
-    data_mmio.write(DONE_OFF, 0x0)
+run_mini("mini_data0_code (CPU store to DATA_BASE+0)",
+         mini_data0_code, wait_s=0.05)
 
-    random_data = [random.randint(0, 255) for _ in range(n)]
-    for i, v in enumerate(random_data):
-        data_mmio.write(i*4, v)
-
-    for i, w in enumerate(bubble_sort_code):
-        inst_mmio.write(i*4, w)
-
-    start = time.time()
-    while (time.time() - start) < timeout:
-        flag = data_mmio.read(DONE_OFF)
-        hw = read_hw_done()
-        if flag == 0xDEADBEEF or hw == 1:
-            print(f"[DONE] Mem={hex(flag)} HW={hw} t={time.time()-start:.4f}s")
-            break
-        time.sleep(0.005)
-    else:
-        print(
-            f"[TIMEOUT] Mem={hex(data_mmio.read(DONE_OFF))} HW={read_hw_done()}")
-
-    result = [data_mmio.read(i*4) for i in range(n)]
-    print("Input :", random_data)
-    print("Output:", result)
-    print("PASS" if result == sorted(random_data) else "FAIL")
-
+val0 = dmem_read32(0x0)
+print("DMEM[0] after CPU run =", hex(val0))
+print("EXPECT 0x11111111 ->", "PASS" if val0 == 0x11111111 else "FAIL")
 
 # -----------------------------
-# Run the safe one first
+# Test 2: CPU writes DONE_ADDR
 # -----------------------------
-print(f"DONE_ADDR = {hex(DONE_ADDR)}")
-run_mini_done()
+hold_reset(0.01)
+dmem_write32(DONE_OFF, 0x0)
+release_reset(0.001)
+
+run_mini("mini_done_code (CPU store to DONE_ADDR)",
+         mini_done_code, wait_s=0.05)
+
+flag = dmem_read32(DONE_OFF)
+print("DONE flag after CPU run =", hex(flag))
+print("EXPECT 0xDEADBEEF ->", "PASS" if flag == 0xDEADBEEF else "FAIL")
+
+# If FAIL, scan DMEM to see if it wrote elsewhere
+if flag != 0xDEADBEEF:
+    hits = scan_dmem_for(0xDEADBEEF, max_hits=10)
+    print("Scan DMEM for 0xDEADBEEF hits at offsets:", [hex(x) for x in hits])
