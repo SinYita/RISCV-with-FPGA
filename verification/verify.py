@@ -73,6 +73,24 @@ bubble_sort_code = [
     0xEEFE8E93, 0x01DE2023, 0x0000006F
 ]
 
+# after loading instructions
+print("IMEM[0] written =", hex(bubble_sort_code[0]))
+print("IMEM[0] readback =", hex(inst_mmio.read(0)))
+
+# write a marker into DMEM and read back
+data_mmio.write(0x100, 0x12345678)
+print("DMEM[0x100] readback =", hex(data_mmio.read(0x100)))
+
+GPIO_DATA2 = 0x8
+GPIO_TRI2 = 0xC
+
+gpio_mmio.write(GPIO_TRI2, 0x0)   # output
+gpio_mmio.write(GPIO_DATA2, 0x0)
+print("GPIO2=0 readback:", hex(gpio_mmio.read(GPIO_DATA2)))
+
+gpio_mmio.write(GPIO_DATA2, 0x1)
+print("GPIO2=1 readback:", hex(gpio_mmio.read(GPIO_DATA2)))
+
 # -----------------------------
 # MODE A: 跑你現在的 assembly（固定 8 個元素）
 # -----------------------------
