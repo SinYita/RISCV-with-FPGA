@@ -99,8 +99,8 @@ module rv_pl(
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             done <= 1'b0;
-        end else if (M_we_dm && (M_alu_o == 32'h00002000)) begin
-            if (M_rf_wd == 32'hDEADBEAF)
+        end else if (M_we_dm && (M_alu_o == 32'h42001FFC)) begin
+            if (M_rf_wd == 32'hDEADBEEF)
                 done <= 1'b1;
         end
     end

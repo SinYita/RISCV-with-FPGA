@@ -2,12 +2,12 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Fri Feb 20 06:28:42 2026
-# Process ID: 3652027
+# Start of session at: Fri Feb 20 17:55:07 2026
+# Process ID: 4157310
 # Current directory: /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/design_1_wrapper.vds
 # Journal file: /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/vivado.jou
-# Running On: halle.cli.ito.cit.tum.de, OS: Linux, CPU Frequency: 3749.960 MHz, CPU Physical cores: 32, Host memory: 810729 MB
+# Running On: halle.cli.ito.cit.tum.de, OS: Linux, CPU Frequency: 3749.982 MHz, CPU Physical cores: 32, Host memory: 810729 MB
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

@@ -18,8 +18,8 @@
       "rst_ps7_0_50M": "",
       "axi_bram_ctrl_1_bram": "",
       "axi_smc": "",
-      "rv_pl_0": "",
-      "axi_gpio_0": ""
+      "axi_gpio_0": "",
+      "rv_pl_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -479,6 +479,20 @@
           }
         }
       },
+      "axi_gpio_0": {
+        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
+        "xci_name": "design_1_axi_gpio_0_1",
+        "xci_path": "ip/design_1_axi_gpio_0_1_1/design_1_axi_gpio_0_1.xci",
+        "inst_hier_path": "axi_gpio_0",
+        "parameters": {
+          "C_ALL_INPUTS": {
+            "value": "1"
+          },
+          "C_GPIO_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
       "rv_pl_0": {
         "vlnv": "user.org:user:rv_pl:1.0",
         "xci_name": "design_1_rv_pl_0_1",
@@ -526,20 +540,6 @@
               "range": "4G",
               "width": "32"
             }
-          }
-        }
-      },
-      "axi_gpio_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "design_1_axi_gpio_0_1",
-        "xci_path": "ip/design_1_axi_gpio_0_1_1/design_1_axi_gpio_0_1.xci",
-        "inst_hier_path": "axi_gpio_0",
-        "parameters": {
-          "C_ALL_INPUTS": {
-            "value": "1"
-          },
-          "C_GPIO_WIDTH": {
-            "value": "1"
           }
         }
       }
@@ -633,8 +633,8 @@
           "rst_ps7_0_50M/slowest_sync_clk",
           "axi_bram_ctrl_1/s_axi_aclk",
           "axi_smc/aclk",
-          "rv_pl_0/clk",
-          "axi_gpio_0/s_axi_aclk"
+          "axi_gpio_0/s_axi_aclk",
+          "rv_pl_0/clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -694,11 +694,6 @@
         "address_spaces": {
           "m_data_axi": {
             "segments": {
-              "SEG_axi_bram_ctrl_0_Mem0": {
-                "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
-                "offset": "0x40000000",
-                "range": "8K"
-              },
               "SEG_axi_bram_ctrl_1_Mem0": {
                 "address_block": "/axi_bram_ctrl_1/S_AXI/Mem0",
                 "offset": "0x42000000",
@@ -716,11 +711,6 @@
               "SEG_axi_bram_ctrl_0_Mem0": {
                 "address_block": "/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0x40000000",
-                "range": "8K"
-              },
-              "SEG_axi_bram_ctrl_1_Mem0": {
-                "address_block": "/axi_bram_ctrl_1/S_AXI/Mem0",
-                "offset": "0x42000000",
                 "range": "8K"
               },
               "SEG_axi_gpio_0_Reg": {

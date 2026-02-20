@@ -159,6 +159,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc /u/halle/dwe/home_at/Desktop/Test/Test.srcs/constrs_1/imports/HDL_WS2526/template_PYNQ-Z2_ref.xdc
+set_property used_in_implementation false [get_files /u/halle/dwe/home_at/Desktop/Test/Test.srcs/constrs_1/imports/HDL_WS2526/template_PYNQ-Z2_ref.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

@@ -20,7 +20,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0_sim_netlist.v" \
   "../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_sim_netlist.v" \
-  "../../../bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_sim_netlist.v" \
   "../../../bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0_sim_netlist.v" \
 -endlib
 -makelib xcelium_lib/blk_mem_gen_v8_4_5 \
@@ -43,6 +42,7 @@
   "../../../bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v" \
   "../../../bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Pipeline_top.v" \
   "../../../bd/design_1/ip/design_1_rv_pl_0_1_1/sim/design_1_rv_pl_0_1.v" \
+  "../../../bd/design_1/ip/design_1_axi_gpio_0_1_1/design_1_axi_gpio_0_1_sim_netlist.v" \
   "../../../bd/design_1/sim/design_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

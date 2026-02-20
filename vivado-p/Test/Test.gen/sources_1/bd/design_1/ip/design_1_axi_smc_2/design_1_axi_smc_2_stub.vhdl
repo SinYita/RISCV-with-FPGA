@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
--- Date        : Fri Feb 20 05:14:52 2026
+-- Date        : Fri Feb 20 17:45:47 2026
 -- Host        : halle.cli.ito.cit.tum.de running 64-bit Ubuntu 24.04.2 LTS
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_axi_smc_2 -prefix
---               design_1_axi_smc_2_ design_1_axi_smc_2_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2_stub.vhdl
 -- Design      : design_1_axi_smc_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

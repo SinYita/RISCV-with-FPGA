@@ -33,7 +33,6 @@ vcom -work xpm -64 -93 \
 vlog -work xil_defaultlib -64 -incr -mfcu "+incdir+../../../bd/design_1/ipshared/5c02/sources_1/imports/riscv-single" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/3007/hdl" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single" "+incdir+/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0_sim_netlist.v" \
 "../../../bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_sim_netlist.v" \
-"../../../bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_sim_netlist.v" \
 "../../../bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0_sim_netlist.v" \
 
 vlog -work blk_mem_gen_v8_4_5 -64 -incr -mfcu "+incdir+../../../bd/design_1/ipshared/5c02/sources_1/imports/riscv-single" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/3007/hdl" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" "+incdir+../../../../Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single" "+incdir+/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xilinx_vip/include" \
@@ -56,6 +55,7 @@ vlog -work xil_defaultlib -64 -incr -mfcu "+incdir+../../../bd/design_1/ipshared
 "../../../bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v" \
 "../../../bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Pipeline_top.v" \
 "../../../bd/design_1/ip/design_1_rv_pl_0_1_1/sim/design_1_rv_pl_0_1.v" \
+"../../../bd/design_1/ip/design_1_axi_gpio_0_1_1/design_1_axi_gpio_0_1_sim_netlist.v" \
 "../../../bd/design_1/sim/design_1.v" \
 
 vlog -work xil_defaultlib \
