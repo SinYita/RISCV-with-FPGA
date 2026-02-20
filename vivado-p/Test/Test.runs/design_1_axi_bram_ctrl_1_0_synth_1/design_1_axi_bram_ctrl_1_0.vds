@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Feb 20 05:12:41 2026
+# Process ID: 3540390
+# Current directory: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_bram_ctrl_1_0_synth_1
+# Command line: vivado -log design_1_axi_bram_ctrl_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_bram_ctrl_1_0.tcl
+# Log file: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_bram_ctrl_1_0_synth_1/design_1_axi_bram_ctrl_1_0.vds
+# Journal file: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_bram_ctrl_1_0_synth_1/vivado.jou
+# Running On: halle.cli.ito.cit.tum.de, OS: Linux, CPU Frequency: 3749.764 MHz, CPU Physical cores: 32, Host memory: 810729 MB
+#-----------------------------------------------------------
+source design_1_axi_bram_ctrl_1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rv_pl:1.0'. The one found in IP location '/u/halle/dwe/home_at/Desktop/Test/Test.srcs' will take precedence over the same IP in location /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axi_bram_ctrl_1_0, cache-ID = 5644c843230db3bc.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 20 05:12:50 2026...

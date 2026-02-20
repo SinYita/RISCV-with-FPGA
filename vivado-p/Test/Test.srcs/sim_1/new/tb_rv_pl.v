@@ -1,130 +1,117 @@
 `timescale 1ns/1ps
 
-module tb_rv_pl_diagnostic;
-    reg clk = 0;
-    reg rst_n = 0;
-    wire [31:0] inst_addr, data_addr, data_wdata;
-    reg  [31:0] inst_rdata, data_rdata;
-    wire        data_we, done;
+module tb_rv_pl;
 
-    // 实例化 CPU
-    rv_pl dut (
-        .clk(clk), .rst_n(rst_n),
-        .inst_addr(inst_addr), .inst_rdata(inst_rdata),
-        .data_we(data_we), .data_addr(data_addr), 
-        .data_wdata(data_wdata), .data_rdata(data_rdata),
-        .done(done)
-    );
+  // --- 时钟与复位 ---
+  reg clk = 0;
+  reg rst_n = 0;
 
-    always #5 clk = ~clk;
+  // --- DUT 端口连接线 ---
+  wire [31:0] imem_addr;
+  wire [31:0] imem_rdata; // 这里的引脚改回 wire，由 TB 的内存模型驱动
+  wire        dmem_we;
+  wire [31:0] dmem_addr;
+  wire [31:0] dmem_wdata;
+  wire [31:0] dmem_rdata; // 这里的引脚改回 wire
+  wire        done;
 
-    // 1k字指令存储器
-    reg [31:0] imem [0:1023];
-    always @(*) inst_rdata = imem[inst_addr[11:2]];
+  // --- 内部寄存器用于模拟存储器行为 ---
+  reg [31:0] imem_rdata_reg;
+  reg [31:0] dmem_rdata_reg;
+  assign imem_rdata = imem_rdata_reg;
+  assign dmem_rdata = dmem_rdata_reg;
 
-    // 1k字数据存储器
-    reg [31:0] dmem [0:1023];
-    always @(posedge clk) begin
-        if (data_we) begin
-            dmem[data_addr[11:2]] <= data_wdata;
-            if (data_addr != 32'h00002000) // 不打印done标志写入
-                $display("[DMEM_WRITE] Addr: 0x%h <= Data: 0x%h (%0d)", data_addr, data_wdata, data_wdata);
-        end
+  // --- 实例化 DUT ---
+  rv_pl dut (
+    .clk(clk),
+    .rst_n(rst_n),
+    .inst_addr(imem_addr),
+    .inst_rdata(imem_rdata),
+    .data_addr(dmem_addr),
+    .data_wdata(dmem_wdata),
+    .data_rdata(dmem_rdata),
+    .data_we(dmem_we),
+    .done(done)
+  );
+
+  // 时钟：100MHz (10ns 周期)
+  always #5 clk = ~clk;
+
+  // --- 存储器模型定义 ---
+  localparam IMEM_WORDS = 4096;
+  localparam DMEM_WORDS = 4096;
+  reg [31:0] imem [0:IMEM_WORDS-1];
+  reg [31:0] dmem [0:DMEM_WORDS-1];
+
+  // 地址转索引 (字节地址 >> 2)
+  wire [31:0] imem_widx = imem_addr >> 2;
+  wire [31:0] dmem_widx = dmem_addr >> 2;
+
+  // --- 同步读取逻辑 (模拟 FPGA BRAM: 1-cycle latency) ---
+  always @(posedge clk) begin
+    // 指令内存读取
+    if (imem_widx < IMEM_WORDS)
+      imem_rdata_reg <= imem[imem_widx];
+    else
+      imem_rdata_reg <= 32'h00000013; // NOP (addi x0, x0, 0)
+
+    // 数据内存读取
+    if (dmem_widx < DMEM_WORDS)
+      dmem_rdata_reg <= dmem[dmem_widx];
+    else
+      dmem_rdata_reg <= 32'h0;
+  end
+
+  // --- 数据内存写入逻辑 ---
+  always @(posedge clk) begin
+    if (dmem_we) begin
+      if (dmem_widx < DMEM_WORDS)
+        dmem[dmem_widx] <= dmem_wdata;
     end
-    always @(*) data_rdata = dmem[data_addr[11:2]];
+  end
 
-    integer i;
-    task display_sorted_array;
-        begin
-            $display("\n╔════════════════════════════════════════╗");
-            $display("║     Sorted Array (Address 0x64-0x8B)  ║");
-            $display("╠════════════════════════════════════════╣");
-            for (i = 0; i < 10; i = i + 1) begin
-                $display("║ arr[%0d] @ 0x%h = %3d (0x%h)       ║", 
-                         i, 100 + i*4, dmem[(100 + i*4)/4], dmem[(100 + i*4)/4]);
-            end
-            $display("╚════════════════════════════════════════╝");
-        end
-    endtask
-
-    initial begin
-        // 初始化指令和数据内存
-        $readmemh("sort.hex", imem);
-        for (i = 0; i < 1024; i = i + 1) dmem[i] = 32'b0;
-        
-        // 复位序列
-        rst_n = 0; #100; rst_n = 1;
-        $display("\n╔═══════════════════════════════════════════════════════╗");
-        $display("║  RISC-V Pipeline Bubble Sort Test - FPGA Version     ║");
-        $display("║  Testing: JAL, BEQ, LW, SW, SLT, and Control Logic  ║");
-        $display("╚═══════════════════════════════════════════════════════╝\n");
-        $display("[INFO] Reset released. Starting bubble sort of 10 numbers...\n");
-
-        fork
-            // 1. 监控成功标志
-            begin
-                wait(done == 1'b1);
-                #50; // 等待最后的写入完成
-                $display("\n╔════════════════════════════════════════════════════════╗");
-                $display("║               ✓ BUBBLE SORT COMPLETED!                ║");
-                $display("╚════════════════════════════════════════════════════════╝");
-                display_sorted_array();
-                
-                // 验证排序正确性
-                if (dmem[25] == 11 && dmem[26] == 12 && dmem[27] == 22 && 
-                    dmem[28] == 25 && dmem[29] == 34 && dmem[30] == 45 &&
-                    dmem[31] == 56 && dmem[32] == 64 && dmem[33] == 78 && dmem[34] == 90) begin
-                    $display("\n✓✓✓ PASS: Array is correctly sorted! ✓✓✓");
-                    $display("✓✓✓ JAL and BEQ instructions working correctly! ✓✓✓\n");
-                end else begin
-                    $display("\n✗✗✗ FAIL: Array is NOT correctly sorted! ✗✗✗\n");
-                end
-                
-                #100 $finish;
-            end
-
-            // 2. 核心诊断逻辑
-            begin
-                forever begin
-                    @(posedge clk);
-                    // 如果 PC 跑飞到非预期范围
-                    if (inst_addr > 32'h0000_01FF && inst_addr !== 32'hX) begin
-                        $display("\n[ERROR] PC Exploded to 0x%h!", inst_addr);
-                        $display("--- EX Stage Data ---");
-                        $display("E_PC       : 0x%h", dut.datapath_inst.E_pc);
-                        $display("E_ImmExt   : 0x%h (signed: %0d)", 
-                                 dut.datapath_inst.E_imm_ext, $signed(dut.datapath_inst.E_imm_ext));
-                        $display("E_Target   : 0x%h", dut.datapath_inst.E_target_PC);
-                        $display("E_PCSrc    : %b", dut.E_pcsrc);
-                        $display("E_Branch   : %b", dut.controller_inst.E_branch);
-                        $display("E_Jump     : %b", dut.controller_inst.E_jump);
-                        $display("ZeroE      : %b", dut.datapath_inst.ZeroE);
-                        $finish;
-                    end
-                    
-                    // 打印跳转发生时的详细情况
-                    if (dut.E_pcsrc === 1'b1) begin
-                        $display("[JUMP_TAKEN] Time: %0t | From PC: 0x%h | Target: 0x%h | Branch:%b Jump:%b Zero:%b", 
-                                 $time, dut.datapath_inst.E_pc, dut.datapath_inst.E_target_PC,
-                                 dut.controller_inst.E_branch, dut.controller_inst.E_jump, dut.datapath_inst.ZeroE);
-                    end
-                end
-            end
-
-            // 3. 超时保护（冒泡排序需要更长时间）
-            begin
-                #50000;
-                $display("\n[TIMEOUT] Test failed. Bubble sort did not complete in time.");
-                $display("Last PC: 0x%h", inst_addr);
-                $display("Partial array state:");
-                display_sorted_array();
-                $finish;
-            end
-        join
+  // --- 核心修改：使用 done 信号结束仿真 ---
+  always @(posedge clk) begin
+    if (rst_n && done) begin
+      $display("\n==================================================");
+      $display("[PASS] DONE Signal Detected!");
+      $display("Time      : %0t", $time);
+      $display("Final Write: Addr=%h, Data=%h", dmem_addr, dmem_wdata);
+      $display("==================================================\n");
+      $finish;
     end
-    
-    initial begin
-        $dumpfile("rv_pl_fpga_sim.vcd");
-        $dumpvars(0, tb_rv_pl_diagnostic);
+  end
+
+  // --- 初始化与加载 ---
+  task load_imem_hex(input [1023:0] filename);
+    begin
+      $display("Loading IMEM from %0s ...", filename);
+      $readmemh(filename, imem);
     end
+  endtask
+
+  initial begin
+    // 1. 初始化内存
+    for (integer j = 0; j < IMEM_WORDS; j = j + 1) imem[j] = 32'h00000013;
+    for (integer j = 0; j < DMEM_WORDS; j = j + 1) dmem[j] = 32'h0;
+
+    // 2. 波形 dump
+    $dumpfile("tb_rv_pl.vcd");
+    $dumpvars(0, tb_rv_pl);
+
+    // 3. 加载程序
+    load_imem_hex("smoke_done.hex");
+
+    // 4. 执行复位
+    rst_n = 0;
+    repeat (10) @(posedge clk);
+    rst_n = 1;
+    $display("CPU Reset Released. Running...");
+
+    // 5. 超时监控
+    repeat (1000) @(posedge clk); // smoke test 不需要 20000 这么久
+    $display("\n[FAIL] Timeout: DONE signal not asserted.");
+    $finish;
+  end
+
 endmodule

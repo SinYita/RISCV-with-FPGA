@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Feb 20 05:11:55 2026
+# Process ID: 3538691
+# Current directory: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_bram_ctrl_0_0_synth_1
+# Command line: vivado -log design_1_axi_bram_ctrl_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_bram_ctrl_0_0.tcl
+# Log file: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_bram_ctrl_0_0_synth_1/design_1_axi_bram_ctrl_0_0.vds
+# Journal file: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_bram_ctrl_0_0_synth_1/vivado.jou
+# Running On: halle.cli.ito.cit.tum.de, OS: Linux, CPU Frequency: 3749.974 MHz, CPU Physical cores: 32, Host memory: 810729 MB
+#-----------------------------------------------------------
+source design_1_axi_bram_ctrl_0_0.tcl -notrace

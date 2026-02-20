@@ -1,0 +1,1430 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Feb 20 04:57:49 2026
+# Process ID: 3526158
+# Current directory: /u/halle/dwe/home_at/Desktop/Test
+# Command line: vivado Test.xpr
+# Log file: /u/halle/dwe/home_at/Desktop/Test/vivado.log
+# Journal file: /u/halle/dwe/home_at/Desktop/Test/vivado.jou
+# Running On: halle.cli.ito.cit.tum.de, OS: Linux, CPU Frequency: 3749.916 MHz, CPU Physical cores: 32, Host memory: 810729 MB
+#-----------------------------------------------------------
+start_gui
+open_project Test.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at /var/tmp/dwe_vivado_inst/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rv_pl:1.0'. The one found in IP location '/u/halle/dwe/home_at/Desktop/Test/Test.srcs' will take precedence over the same IP in location /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 7906.496 ; gain = 96.309 ; free physical = 394698 ; free virtual = 802979
+update_compile_order -fileset sources_1
+open_bd_design {/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+Reading block design file </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_1
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - axi_bram_ctrl_1_bram
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- user.org:user:rv_pl:1.0 - rv_pl_0
+Successfully read diagram <design_1> from block design file </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd>
+delete_bd_objs [get_bd_intf_nets rv_pl_0_m_data_axi] [get_bd_intf_nets rv_pl_0_m_inst_axi] [get_bd_nets rst_ps7_0_50M_interconnect_aresetn] [get_bd_cells rv_pl_0]
+startgroup
+create_bd_cell -type ip -vlnv user.org:user:rv_pl:1.0 rv_pl_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/rv_pl_0/m_data_axi} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins rv_pl_0/m_data_axi]
+Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/rv_pl_0/m_data_axi' at <0x4000_0000 [ 8K ]>.
+Slave segment '/axi_bram_ctrl_1/S_AXI/Mem0' is being assigned into address space '/rv_pl_0/m_data_axi' at <0x4200_0000 [ 8K ]>.
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/rv_pl_0/m_data_axi' at <0x4120_0000 [ 64K ]>.
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/rv_pl_0/m_inst_axi} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins rv_pl_0/m_inst_axi]
+Slave segment '/axi_bram_ctrl_0/S_AXI/Mem0' is being assigned into address space '/rv_pl_0/m_inst_axi' at <0x4000_0000 [ 8K ]>.
+Slave segment '/axi_bram_ctrl_1/S_AXI/Mem0' is being assigned into address space '/rv_pl_0/m_inst_axi' at <0x4200_0000 [ 8K ]>.
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/rv_pl_0/m_inst_axi' at <0x4120_0000 [ 64K ]>.
+endgroup
+validate_bd_design
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_2: SmartConnect design_1_axi_smc_2 is in High-performance Mode.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/rv_pl_0/rst_n
+
+connect_bd_net [get_bd_pins rv_pl_0/rst_n] [get_bd_pins rst_ps7_0_50M/interconnect_aresetn]
+validate_bd_design
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_2: SmartConnect design_1_axi_smc_2 is in High-performance Mode.
+save_bd_design
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /u/halle/dwe/home_at/Test/Test.srcs/utils_1/imports/synth_1/rv_pl.dcp with file /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/rv_pl.dcp
+launch_runs synth_1 -jobs 64
+[Fri Feb 20 05:00:17 2026] Launched synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9481.918 ; gain = 0.000 ; free physical = 393615 ; free virtual = 801919
+INFO: [Netlist 29-17] Analyzing 175 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9481.918 ; gain = 0.000 ; free physical = 393398 ; free virtual = 801702
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 9481.918 ; gain = 0.000 ; free physical = 393755 ; free virtual = 802058
+open_bd_design {/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /u/halle/dwe/home_at/Test/Test.srcs/utils_1/imports/synth_1/rv_pl.dcp with file /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/rv_pl.dcp
+launch_runs synth_1 -jobs 64
+[Fri Feb 20 05:03:37 2026] Launched synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 9864.230 ; gain = 0.000 ; free physical = 393607 ; free virtual = 801921
+INFO: [Netlist 29-17] Analyzing 175 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9864.230 ; gain = 0.000 ; free physical = 393267 ; free virtual = 801581
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_bd_design {/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+set_property top design_1_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /u/halle/dwe/home_at/Test/Test.srcs/utils_1/imports/synth_1/rv_pl.dcp with file /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/rv_pl.dcp
+launch_runs synth_1 -jobs 64
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+WARNING: [IP_Flow 19-5160] IP 'design_1_processing_system7_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_1_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm_dpi' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [IP_Flow 19-5160] IP 'design_1_axi_bram_ctrl_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+WARNING: [IP_Flow 19-5160] IP 'design_1_axi_bram_ctrl_1_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'Verilog' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block blk_mem_gen_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_bram_ctrl_1_bram .
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/hw_handoff/design_1_axi_smc_2.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/design_1_axi_smc_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rv_pl_0 .
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_bram_ctrl_1_bram_0, cache-ID = 132da18f64ca211d; cache size = 27.374 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_blk_mem_gen_0_0, cache-ID = 132da18f64ca211d; cache size = 27.374 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_processing_system7_0_0, cache-ID = 23b5481f9fe98b9f; cache size = 27.374 MB.
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_rst_ps7_0_50M_0, cache-ID = 6dbaa91086f144a6; cache size = 27.374 MB.
+[Fri Feb 20 05:11:54 2026] Launched design_1_axi_bram_ctrl_0_0_synth_1, design_1_axi_gpio_0_0_synth_1, design_1_axi_bram_ctrl_1_0_synth_1, design_1_axi_smc_2_synth_1, design_1_rv_pl_0_1_synth_1...
+Run output will be captured here:
+design_1_axi_bram_ctrl_0_0_synth_1: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_bram_ctrl_0_0_synth_1/runme.log
+design_1_axi_gpio_0_0_synth_1: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_gpio_0_0_synth_1/runme.log
+design_1_axi_bram_ctrl_1_0_synth_1: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_bram_ctrl_1_0_synth_1/runme.log
+design_1_axi_smc_2_synth_1: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_smc_2_synth_1/runme.log
+design_1_rv_pl_0_1_synth_1: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_rv_pl_0_1_synth_1/runme.log
+[Fri Feb 20 05:11:54 2026] Launched synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 10189.488 ; gain = 200.227 ; free physical = 393176 ; free virtual = 801485
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0.dcp' for cell 'design_1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_bram_0/design_1_axi_bram_ctrl_1_bram_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1_bram'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.dcp' for cell 'design_1_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0_1/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/design_1_rv_pl_0_1.dcp' for cell 'design_1_i/rv_pl_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.33 ; elapsed = 00:00:00.32 . Memory (MB): peak = 10354.234 ; gain = 0.000 ; free physical = 390341 ; free virtual = 798767
+INFO: [Netlist 29-17] Analyzing 469 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-1714] 112 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'design_1_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 10354.234 ; gain = 0.000 ; free physical = 390240 ; free virtual = 798666
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 265 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 211 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 16 instances
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 11208.141 ; gain = 853.906 ; free physical = 389901 ; free virtual = 798325
+launch_runs impl_1 -jobs 64
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.08 . Memory (MB): peak = 11208.141 ; gain = 0.000 ; free physical = 390431 ; free virtual = 798865
+WARNING: [Common 17-210] 'write_hwdef' is deprecated.
+[Fri Feb 20 05:18:23 2026] Launched impl_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/impl_1/runme.log
+close_design
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.29 . Memory (MB): peak = 11208.141 ; gain = 0.000 ; free physical = 387535 ; free virtual = 796029
+INFO: [Netlist 29-17] Analyzing 407 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.72 ; elapsed = 00:00:00.71 . Memory (MB): peak = 11208.141 ; gain = 0.000 ; free physical = 388919 ; free virtual = 797413
+Restored from archive | CPU: 0.740000 secs | Memory: 20.025551 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.73 ; elapsed = 00:00:00.71 . Memory (MB): peak = 11208.141 ; gain = 0.000 ; free physical = 388919 ; free virtual = 797413
+Generating merged BMM file for the design top 'design_1_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 11208.141 ; gain = 0.000 ; free physical = 389145 ; free virtual = 797640
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 203 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 159 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 11208.141 ; gain = 0.000 ; free physical = 389176 ; free virtual = 797666
+open_bd_design {/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single'. The path is contained within another repository.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rv_pl:1.0'. The one found in IP location '/u/halle/dwe/home_at/Desktop/Test/Test.srcs' will take precedence over the same IP in location /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:rv_pl:1.0 [get_ips  design_1_rv_pl_0_1] -log ip_upgrade.log
+Upgrading '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_rv_pl_0_1 to use current project options
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/u/halle/dwe/home_at/Desktop/Test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_rv_pl_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_2: SmartConnect design_1_axi_smc_2 is in High-performance Mode.
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/hw_handoff/design_1_axi_smc_2.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/design_1_axi_smc_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rv_pl_0 .
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 388841 ; free virtual = 797358
+catch { config_ip_cache -export [get_ips -all design_1_axi_smc_2] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_2, cache-ID = 0cb45b66225a8421; cache size = 65.708 MB.
+catch { [ delete_ip_run [get_ips -all design_1_axi_smc_2] ] }
+catch { config_ip_cache -export [get_ips -all design_1_rv_pl_0_1] }
+export_ip_user_files -of_objects [get_files /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_rv_pl_0_1_synth_1 -jobs 64
+[Fri Feb 20 05:24:13 2026] Launched design_1_rv_pl_0_1_synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_rv_pl_0_1_synth_1/runme.log
+export_simulation -of_objects [get_files /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd] -directory /u/halle/dwe/home_at/Desktop/Test/Test.ip_user_files/sim_scripts -ip_user_files_dir /u/halle/dwe/home_at/Desktop/Test/Test.ip_user_files -ipstatic_source_dir /u/halle/dwe/home_at/Desktop/Test/Test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/modelsim} {questa=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/questa} {xcelium=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/xcelium} {vcs=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/vcs} {riviera=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+open_bd_design {/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+validate_bd_design -force
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_2: SmartConnect design_1_axi_smc_2 is in High-performance Mode.
+validate_bd_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 388450 ; free virtual = 796977
+set_property top rv_pl [current_fileset]
+update_compile_order -fileset sources_1
+set_property top design_1_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+generate_target all [get_files /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/hw_handoff/design_1_axi_smc_2.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/design_1_axi_smc_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 389702 ; free virtual = 798266
+create_ip_run [get_files -of_objects [get_fileset sources_1] /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_smc_2_synth_1
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_2, cache-ID = 0cb45b66225a8421; cache size = 68.205 MB.
+[Fri Feb 20 05:25:59 2026] Launched design_1_axi_smc_2_synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_smc_2_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 389247 ; free virtual = 797772
+wait_on_run design_1_axi_smc_2_synth_1
+[Fri Feb 20 05:26:00 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+[Fri Feb 20 05:26:05 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+[Fri Feb 20 05:26:10 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+[Fri Feb 20 05:26:15 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+[Fri Feb 20 05:26:25 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+
+*** Running vivado
+    with args -log design_1_axi_smc_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_2.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_axi_smc_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rv_pl:1.0'. The one found in IP location '/u/halle/dwe/home_at/Desktop/Test/Test.srcs' will take precedence over the same IP in location /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axi_smc_2, cache-ID = 0cb45b66225a8421.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 20 05:26:15 2026...
+[Fri Feb 20 05:26:30 2026] design_1_axi_smc_2_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:03 ; elapsed = 00:00:30 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 389221 ; free virtual = 797792
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: design_1_wrapper
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 389027 ; free virtual = 797593
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_0' (1#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_0' (2#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_bram_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_bram_0' (3#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_bram_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'design_1_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'design_1_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_1_bram' of module 'design_1_axi_bram_ctrl_1_bram_0' has 16 connections declared, but only 14 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (4#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_2' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_smc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_2' (5#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_smc_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M00_AXI_arqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M01_AXI_awqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M01_AXI_arqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_2' has 152 connections declared, but only 146 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+INFO: [Synth 8-6157] synthesizing module 'design_1_blk_mem_gen_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_blk_mem_gen_0_0' (6#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'design_1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'design_1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'design_1_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (7#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_0' (8#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' has 10 connections declared, but only 7 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rv_pl_0_1' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rv_pl_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rv_pl_0_1' (9#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rv_pl_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'done' of module 'design_1_rv_pl_0_1' is unconnected for instance 'rv_pl_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:637]
+WARNING: [Synth 8-7023] instance 'rv_pl_0' of module 'design_1_rv_pl_0_1' has 27 connections declared, but only 26 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:637]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (10#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/var/tmp/dwe_vivado_inst/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (11#1) [/var/tmp/dwe_vivado_inst/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 389283 ; free virtual = 797850
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 389199 ; free virtual = 797766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 389204 ; free virtual = 797771
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0.dcp' for cell 'design_1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_bram_0/design_1_axi_bram_ctrl_1_bram_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1_bram'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.dcp' for cell 'design_1_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0_1/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/design_1_rv_pl_0_1.dcp' for cell 'design_1_i/rv_pl_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.30 ; elapsed = 00:00:00.29 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 389020 ; free virtual = 797590
+INFO: [Netlist 29-17] Analyzing 469 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 112 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 11544.324 ; gain = 0.000 ; free physical = 388854 ; free virtual = 797424
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 265 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 211 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 16 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 12563.953 ; gain = 1019.629 ; free physical = 388711 ; free virtual = 797276
+41 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 12563.953 ; gain = 1019.629 ; free physical = 388711 ; free virtual = 797276
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /u/halle/dwe/home_at/Test/Test.srcs/utils_1/imports/synth_1/rv_pl.dcp with file /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/design_1_wrapper.dcp
+launch_runs synth_1 -jobs 64
+[Fri Feb 20 05:27:07 2026] Launched synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0.dcp' for cell 'design_1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_bram_0/design_1_axi_bram_ctrl_1_bram_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1_bram'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.dcp' for cell 'design_1_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0_1/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/design_1_rv_pl_0_1.dcp' for cell 'design_1_i/rv_pl_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.31 . Memory (MB): peak = 12563.953 ; gain = 0.000 ; free physical = 389493 ; free virtual = 797994
+INFO: [Netlist 29-17] Analyzing 469 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-1714] 112 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'design_1_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 12563.953 ; gain = 0.000 ; free physical = 389192 ; free virtual = 797694
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 265 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 211 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 16 instances
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 12667.270 ; gain = 103.316 ; free physical = 388822 ; free virtual = 797324
+create_ip_run [get_files -of_objects [get_fileset sources_1] /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: design_1_wrapper
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 12667.270 ; gain = 0.000 ; free physical = 388518 ; free virtual = 797021
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_0' (1#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_0' (2#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_bram_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_bram_0' (3#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_bram_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'design_1_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'design_1_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_1_bram' of module 'design_1_axi_bram_ctrl_1_bram_0' has 16 connections declared, but only 14 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (4#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_2' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_smc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_2' (5#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_smc_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M00_AXI_arqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M01_AXI_awqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M01_AXI_arqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_2' has 152 connections declared, but only 146 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+INFO: [Synth 8-6157] synthesizing module 'design_1_blk_mem_gen_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_blk_mem_gen_0_0' (6#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'design_1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'design_1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'design_1_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (7#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_0' (8#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' has 10 connections declared, but only 7 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rv_pl_0_1' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rv_pl_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rv_pl_0_1' (9#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rv_pl_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'done' of module 'design_1_rv_pl_0_1' is unconnected for instance 'rv_pl_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:637]
+WARNING: [Synth 8-7023] instance 'rv_pl_0' of module 'design_1_rv_pl_0_1' has 27 connections declared, but only 26 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:637]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (10#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/var/tmp/dwe_vivado_inst/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (11#1) [/var/tmp/dwe_vivado_inst/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 12667.270 ; gain = 0.000 ; free physical = 388909 ; free virtual = 797413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 12667.270 ; gain = 0.000 ; free physical = 388996 ; free virtual = 797500
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 12667.270 ; gain = 0.000 ; free physical = 389001 ; free virtual = 797505
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0.dcp' for cell 'design_1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_bram_0/design_1_axi_bram_ctrl_1_bram_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1_bram'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.dcp' for cell 'design_1_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0_1/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/design_1_rv_pl_0_1.dcp' for cell 'design_1_i/rv_pl_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.30 . Memory (MB): peak = 12667.270 ; gain = 0.000 ; free physical = 388720 ; free virtual = 797224
+INFO: [Netlist 29-17] Analyzing 469 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 112 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 12667.270 ; gain = 0.000 ; free physical = 388216 ; free virtual = 796721
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 265 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 211 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 16 instances
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 13023.074 ; gain = 355.805 ; free physical = 388099 ; free virtual = 796603
+41 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 13023.074 ; gain = 355.805 ; free physical = 388099 ; free virtual = 796603
+current_design synth_1
+report_utilization -name utilization_1
+open_bd_design {/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single'. The path is contained within another repository.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rv_pl:1.0'. The one found in IP location '/u/halle/dwe/home_at/Desktop/Test/Test.srcs' will take precedence over the same IP in location /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:rv_pl:1.0 [get_ips  design_1_rv_pl_0_1] -log ip_upgrade.log
+Upgrading '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_rv_pl_0_1 to use current project options
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/u/halle/dwe/home_at/Desktop/Test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_rv_pl_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_2: SmartConnect design_1_axi_smc_2 is in High-performance Mode.
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/hw_handoff/design_1_axi_smc_2.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/design_1_axi_smc_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rv_pl_0 .
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:29 ; elapsed = 00:00:27 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 388734 ; free virtual = 797275
+catch { config_ip_cache -export [get_ips -all design_1_axi_smc_2] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_2, cache-ID = 0cb45b66225a8421; cache size = 65.708 MB.
+catch { [ delete_ip_run [get_ips -all design_1_axi_smc_2] ] }
+catch { config_ip_cache -export [get_ips -all design_1_rv_pl_0_1] }
+export_ip_user_files -of_objects [get_files /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_rv_pl_0_1_synth_1 -jobs 64
+[Fri Feb 20 05:34:17 2026] Launched design_1_rv_pl_0_1_synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_rv_pl_0_1_synth_1/runme.log
+export_simulation -of_objects [get_files /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd] -directory /u/halle/dwe/home_at/Desktop/Test/Test.ip_user_files/sim_scripts -ip_user_files_dir /u/halle/dwe/home_at/Desktop/Test/Test.ip_user_files -ipstatic_source_dir /u/halle/dwe/home_at/Desktop/Test/Test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/modelsim} {questa=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/questa} {xcelium=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/xcelium} {vcs=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/vcs} {riviera=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+validate_bd_design -force
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_2: SmartConnect design_1_axi_smc_2 is in High-performance Mode.
+validate_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 386528 ; free virtual = 795071
+current_design rtl_1
+wait_on_run design_1_rv_pl_0_1_synth_1
+[Fri Feb 20 05:34:55 2026] Waiting for design_1_rv_pl_0_1_synth_1 to finish...
+[Fri Feb 20 05:35:00 2026] Waiting for design_1_rv_pl_0_1_synth_1 to finish...
+[Fri Feb 20 05:35:05 2026] Waiting for design_1_rv_pl_0_1_synth_1 to finish...
+[Fri Feb 20 05:35:10 2026] Waiting for design_1_rv_pl_0_1_synth_1 to finish...
+
+*** Running vivado
+    with args -log design_1_rv_pl_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rv_pl_0_1.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_rv_pl_0_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rv_pl:1.0'. The one found in IP location '/u/halle/dwe/home_at/Desktop/Test/Test.srcs' will take precedence over the same IP in location /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single
+Command: synth_design -top design_1_rv_pl_0_1 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3605083
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2598.742 ; gain = 0.000 ; free physical = 386442 ; free virtual = 794989
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_rv_pl_0_1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/synth/design_1_rv_pl_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'rv_pl' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Pipeline_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Register_File' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Register_File.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Register_File' (1#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Register_File.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Datapath.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (2#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'flopenr' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'flopenr' (3#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:11]
+INFO: [Synth 8-6157] synthesizing module 'flopenclr' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'flopenclr' (4#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:32]
+INFO: [Synth 8-6157] synthesizing module 'Sign_Extend' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Sign_Extend.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Sign_Extend' (5#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Sign_Extend.v:3]
+INFO: [Synth 8-6157] synthesizing module 'flopclr' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr' (6#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'flopclr__parameterized0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr__parameterized0' (6#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'mux3' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Mux.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'mux3' (7#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Mux.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (8#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'flopr' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'flopr' (9#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6157] synthesizing module 'flopr__parameterized0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'flopr__parameterized0' (9#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (10#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Datapath.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Controller' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Op_Decoder' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Op_Decoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Op_Decoder' (11#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Op_Decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Decoder' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU_Decoder.v:3]
+INFO: [Synth 8-226] default block is never used [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU_Decoder.v:14]
+INFO: [Synth 8-226] default block is never used [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU_Decoder.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Decoder' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU_Decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'flopclr__parameterized1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr__parameterized1' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'flopclr__parameterized2' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr__parameterized2' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'flopclr__parameterized3' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr__parameterized3' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'flopr__parameterized1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'flopr__parameterized1' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6157] synthesizing module 'flopr__parameterized2' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'flopr__parameterized2' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Controller' (13#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Hazard_Unit' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Hazard_Unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Hazard_Unit' (14#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Hazard_Unit.v:1]
+WARNING: [Synth 8-3848] Net M_sel_result in module/entity rv_pl does not have driver. [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Pipeline_top.v:73]
+INFO: [Synth 8-6155] done synthesizing module 'rv_pl' (15#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Pipeline_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rv_pl_0_1' (16#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/synth/design_1_rv_pl_0_1.v:57]
+WARNING: [Synth 8-7129] Port funct7[6] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[4] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[3] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[2] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[1] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[0] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[6] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[5] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[4] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[3] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[2] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[1] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[0] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W_we_rf in module Datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_arready in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rresp[1] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rresp[0] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rvalid in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_awready in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_wready in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bresp[1] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bresp[0] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bvalid in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_arready in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rresp[1] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rresp[0] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rvalid in module rv_pl is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2598.742 ; gain = 0.000 ; free physical = 386355 ; free virtual = 794903
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2598.742 ; gain = 0.000 ; free physical = 387096 ; free virtual = 795644
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2598.742 ; gain = 0.000 ; free physical = 387104 ; free virtual = 795652
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2598.742 ; gain = 0.000 ; free physical = 387068 ; free virtual = 795617
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2662.609 ; gain = 0.000 ; free physical = 387019 ; free virtual = 795567
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2662.609 ; gain = 0.000 ; free physical = 387039 ; free virtual = 795587
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387019 ; free virtual = 795552
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387050 ; free virtual = 795583
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387012 ; free virtual = 795545
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387360 ; free virtual = 795894
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 47    
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	  33 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 17    
+	   2 Input    5 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   8 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 35    
+	   8 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_inst_axi_arvalid driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_inst_axi_rready driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_wstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_wstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_wstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_wstrb[0] driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_bready driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_rready driven by constant 1
+WARNING: [Synth 8-7129] Port Ins[6] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[5] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[4] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[3] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[2] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[1] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[0] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W_we_rf in module Datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_arready in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rresp[1] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rresp[0] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rvalid in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_awready in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_wready in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bresp[1] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bresp[0] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bvalid in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_arready in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rresp[1] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rresp[0] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rvalid in module design_1_rv_pl_0_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387633 ; free virtual = 796176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387046 ; free virtual = 795590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387506 ; free virtual = 796050
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387188 ; free virtual = 795732
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387456 ; free virtual = 796001
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387483 ; free virtual = 796027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387437 ; free virtual = 795981
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387361 ; free virtual = 795905
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387576 ; free virtual = 796120
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387637 ; free virtual = 796181
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    40|
+|2     |LUT1   |    34|
+|3     |LUT2   |   253|
+|4     |LUT3   |   161|
+|5     |LUT4   |    82|
+|6     |LUT5   |   239|
+|7     |LUT6   |  1046|
+|8     |MUXF7  |   135|
+|9     |FDCE   |   523|
+|10    |FDRE   |   992|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387637 ; free virtual = 796181
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2662.609 ; gain = 0.000 ; free physical = 387447 ; free virtual = 795992
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2662.609 ; gain = 63.867 ; free physical = 387408 ; free virtual = 795953
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2662.609 ; gain = 0.000 ; free physical = 387105 ; free virtual = 795646
+INFO: [Netlist 29-17] Analyzing 175 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2662.609 ; gain = 0.000 ; free physical = 386620 ; free virtual = 795160
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: d6c29f93
+INFO: [Common 17-83] Releasing license: Synthesis
+73 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2662.609 ; gain = 64.031 ; free physical = 386717 ; free virtual = 795257
+INFO: [Common 17-1381] The checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_rv_pl_0_1_synth_1/design_1_rv_pl_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_rv_pl_0_1, cache-ID = a349fbca38424881
+INFO: [Coretcl 2-1174] Renamed 37 cell refs.
+INFO: [Common 17-1381] The checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_rv_pl_0_1_synth_1/design_1_rv_pl_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_rv_pl_0_1_utilization_synth.rpt -pb design_1_rv_pl_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 20 05:34:58 2026...
+[Fri Feb 20 05:35:10 2026] design_1_rv_pl_0_1_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 388433 ; free virtual = 796965
+generate_target all [get_files /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/hw_handoff/design_1_axi_smc_2.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/design_1_axi_smc_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 389067 ; free virtual = 797616
+create_ip_run [get_files -of_objects [get_fileset sources_1] /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_axi_smc_2_synth_1
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_2, cache-ID = 0cb45b66225a8421; cache size = 68.205 MB.
+[Fri Feb 20 05:35:25 2026] Launched design_1_axi_smc_2_synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_axi_smc_2_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 388771 ; free virtual = 797289
+wait_on_run design_1_axi_smc_2_synth_1
+[Fri Feb 20 05:35:25 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+[Fri Feb 20 05:35:30 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+[Fri Feb 20 05:35:35 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+[Fri Feb 20 05:35:41 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+[Fri Feb 20 05:35:51 2026] Waiting for design_1_axi_smc_2_synth_1 to finish...
+
+*** Running vivado
+    with args -log design_1_axi_smc_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_2.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_axi_smc_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rv_pl:1.0'. The one found in IP location '/u/halle/dwe/home_at/Desktop/Test/Test.srcs' will take precedence over the same IP in location /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_axi_smc_2, cache-ID = 0cb45b66225a8421.
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 20 05:35:42 2026...
+[Fri Feb 20 05:35:56 2026] design_1_axi_smc_2_synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:30 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 388259 ; free virtual = 796820
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 388697 ; free virtual = 797253
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_0' (1#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_0' (2#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_bram_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_bram_0' (3#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_bram_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'design_1_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'design_1_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_1_bram' of module 'design_1_axi_bram_ctrl_1_bram_0' has 16 connections declared, but only 14 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (4#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_2' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_smc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_2' (5#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_smc_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M00_AXI_arqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M01_AXI_awqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M01_AXI_arqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_2' has 152 connections declared, but only 146 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+INFO: [Synth 8-6157] synthesizing module 'design_1_blk_mem_gen_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_blk_mem_gen_0_0' (6#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'design_1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'design_1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'design_1_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (7#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_0' (8#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' has 10 connections declared, but only 7 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rv_pl_0_1' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rv_pl_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rv_pl_0_1' (9#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rv_pl_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'done' of module 'design_1_rv_pl_0_1' is unconnected for instance 'rv_pl_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:637]
+WARNING: [Synth 8-7023] instance 'rv_pl_0' of module 'design_1_rv_pl_0_1' has 27 connections declared, but only 26 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:637]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (10#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/var/tmp/dwe_vivado_inst/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (11#1) [/var/tmp/dwe_vivado_inst/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 388530 ; free virtual = 797085
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 388465 ; free virtual = 797021
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 388465 ; free virtual = 797021
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0.dcp' for cell 'design_1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_bram_0/design_1_axi_bram_ctrl_1_bram_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1_bram'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.dcp' for cell 'design_1_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0_1/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/design_1_rv_pl_0_1.dcp' for cell 'design_1_i/rv_pl_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.33 . Memory (MB): peak = 13023.074 ; gain = 0.000 ; free physical = 389055 ; free virtual = 797614
+INFO: [Netlist 29-17] Analyzing 469 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 112 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 13517.711 ; gain = 494.637 ; free physical = 388432 ; free virtual = 796991
+reset_run synth_1
+INFO: [Project 1-1161] Replacing file /u/halle/dwe/home_at/Test/Test.srcs/utils_1/imports/synth_1/rv_pl.dcp with file /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/design_1_wrapper.dcp
+launch_runs synth_1 -jobs 64
+[Fri Feb 20 05:36:20 2026] Launched synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1/runme.log
+current_design synth_1
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0.dcp' for cell 'design_1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_bram_0/design_1_axi_bram_ctrl_1_bram_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1_bram'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.dcp' for cell 'design_1_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0_1/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/design_1_rv_pl_0_1.dcp' for cell 'design_1_i/rv_pl_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.32 . Memory (MB): peak = 13517.711 ; gain = 0.000 ; free physical = 388702 ; free virtual = 797254
+INFO: [Netlist 29-17] Analyzing 469 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-1714] 112 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Generating merged BMM file for the design top 'design_1_wrapper'...
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 13517.711 ; gain = 0.000 ; free physical = 388941 ; free virtual = 797494
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 265 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 211 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 16 instances
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 13537.711 ; gain = 20.000 ; free physical = 388726 ; free virtual = 797274
+report_utilization -name utilization_1
+open_bd_design {/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+open_bd_design {/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+validate_bd_design -force
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_2: SmartConnect design_1_axi_smc_2 is in High-performance Mode.
+validate_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 13537.711 ; gain = 0.000 ; free physical = 387393 ; free virtual = 795875
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single'. The path is contained within another repository.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rv_pl:1.0'. The one found in IP location '/u/halle/dwe/home_at/Desktop/Test/Test.srcs' will take precedence over the same IP in location /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single
+report_ip_status -name ip_status
+upgrade_ip -vlnv user.org:user:rv_pl:1.0 [get_ips  design_1_rv_pl_0_1] -log ip_upgrade.log
+Upgrading '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-3420] Updated design_1_rv_pl_0_1 to use current project options
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/u/halle/dwe/home_at/Desktop/Test/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_1_rv_pl_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [xilinx.com:ip:smartconnect:1.0-1] design_1_axi_smc_2: SmartConnect design_1_axi_smc_2 is in High-performance Mode.
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addra'(32) to pin: '/axi_bram_ctrl_0/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/blk_mem_gen_0/addrb'(32) to pin: '/axi_bram_ctrl_0/bram_addr_b'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addra'(32) to pin: '/axi_bram_ctrl_1/bram_addr_a'(13) - Only lower order bits will be connected.
+WARNING: [BD 41-2384] Width mismatch when connecting pin: '/axi_bram_ctrl_1_bram/addrb'(32) to pin: '/axi_bram_ctrl_1/bram_addr_b'(13) - Only lower order bits will be connected.
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/hw_handoff/design_1_axi_smc_2.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/synth/design_1_axi_smc_2.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rv_pl_0 .
+Exporting to file /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Hardware Definition File /u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 13537.711 ; gain = 0.000 ; free physical = 388316 ; free virtual = 796822
+catch { config_ip_cache -export [get_ips -all design_1_axi_smc_2] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_1_axi_smc_2, cache-ID = 0cb45b66225a8421; cache size = 65.708 MB.
+catch { [ delete_ip_run [get_ips -all design_1_axi_smc_2] ] }
+catch { config_ip_cache -export [get_ips -all design_1_rv_pl_0_1] }
+export_ip_user_files -of_objects [get_files /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs design_1_rv_pl_0_1_synth_1 -jobs 64
+[Fri Feb 20 05:41:09 2026] Launched design_1_rv_pl_0_1_synth_1...
+Run output will be captured here: /u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_rv_pl_0_1_synth_1/runme.log
+export_simulation -of_objects [get_files /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd] -directory /u/halle/dwe/home_at/Desktop/Test/Test.ip_user_files/sim_scripts -ip_user_files_dir /u/halle/dwe/home_at/Desktop/Test/Test.ip_user_files -ipstatic_source_dir /u/halle/dwe/home_at/Desktop/Test/Test.ip_user_files/ipstatic -lib_map_path [list {modelsim=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/modelsim} {questa=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/questa} {xcelium=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/xcelium} {vcs=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/vcs} {riviera=/u/halle/dwe/home_at/Desktop/Test/Test.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+current_design rtl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd]
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 13537.711 ; gain = 0.000 ; free physical = 388138 ; free virtual = 796663
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_0_0' (1#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_0' (2#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_bram_ctrl_1_bram_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_bram_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_bram_ctrl_1_bram_0' (3#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_bram_ctrl_1_bram_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'design_1_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'design_1_axi_bram_ctrl_1_bram_0' is unconnected for instance 'axi_bram_ctrl_1_bram' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_1_bram' of module 'design_1_axi_bram_ctrl_1_bram_0' has 16 connections declared, but only 14 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:364]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (4#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_2' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_smc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_2' (5#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_axi_smc_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M00_AXI_arqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M01_AXI_awqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M01_AXI_arqos' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'design_1_axi_smc_2' is unconnected for instance 'axi_smc' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'design_1_axi_smc_2' has 152 connections declared, but only 146 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:402]
+INFO: [Synth 8-6157] synthesizing module 'design_1_blk_mem_gen_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_blk_mem_gen_0_0' (6#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_blk_mem_gen_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'design_1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'design_1_blk_mem_gen_0_0' is unconnected for instance 'blk_mem_gen_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+WARNING: [Synth 8-7023] instance 'blk_mem_gen_0' of module 'design_1_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:549]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (7#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_0' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_0' (8#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' has 10 connections declared, but only 7 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:629]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rv_pl_0_1' [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rv_pl_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rv_pl_0_1' (9#1) [/u/halle/dwe/home_at/Desktop/Test/.Xil/Vivado-3526158-halle.cli.ito.cit.tum.de/realtime/design_1_rv_pl_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'done' of module 'design_1_rv_pl_0_1' is unconnected for instance 'rv_pl_0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:637]
+WARNING: [Synth 8-7023] instance 'rv_pl_0' of module 'design_1_rv_pl_0_1' has 27 connections declared, but only 26 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:637]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (10#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/var/tmp/dwe_vivado_inst/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (11#1) [/var/tmp/dwe_vivado_inst/Vivado/2021.2/scripts/rt/data/unisim_comp.v:59735]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 13537.711 ; gain = 0.000 ; free physical = 388011 ; free virtual = 796536
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 13537.711 ; gain = 0.000 ; free physical = 388261 ; free virtual = 796786
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 13537.711 ; gain = 0.000 ; free physical = 388271 ; free virtual = 796796
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0.dcp' for cell 'design_1_i/axi_bram_ctrl_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_bram_0/design_1_axi_bram_ctrl_1_bram_0.dcp' for cell 'design_1_i/axi_bram_ctrl_1_bram'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.dcp' for cell 'design_1_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2.dcp' for cell 'design_1_i/axi_smc'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_blk_mem_gen_0_0_1/design_1_blk_mem_gen_0_0.dcp' for cell 'design_1_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.dcp' for cell 'design_1_i/rst_ps7_0_50M'
+INFO: [Project 1-454] Reading design checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/design_1_rv_pl_0_1.dcp' for cell 'design_1_i/rv_pl_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00.76 ; elapsed = 00:00:00.31 . Memory (MB): peak = 13537.711 ; gain = 0.000 ; free physical = 387382 ; free virtual = 795910
+INFO: [Netlist 29-17] Analyzing 469 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0_board.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0.xdc] for cell 'design_1_i/axi_gpio_0/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0.xdc] for cell 'design_1_i/rst_ps7_0_50M/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0_board.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_axi_smc_2/bd_0/ip/ip_1/bd_6e42_psr_aclk_0.xdc] for cell 'design_1_i/axi_smc/inst/clk_map/psr_aclk/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 112 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 13924.754 ; gain = 387.043 ; free physical = 387854 ; free virtual = 796383
+open_bd_design {/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd}
+regenerate_bd_layout
+delete_bd_objs [get_bd_intf_nets axi_smc_M02_AXI] [get_bd_intf_nets axi_gpio_0_GPIO] [get_bd_cells axi_gpio_0]
+delete_bd_objs [get_bd_intf_ports gpio_rtl_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
+INFO: [BoardRule 102-8] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 gpio_rtl_0
+INFO: [BoardRule 102-9] connect_bd_intf_net /gpio_rtl_0 /axi_gpio_0/GPIO
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_smc} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/processing_system7_0/Data' at <0x4120_0000 [ 64K ]>.
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/rv_pl_0/m_data_axi' at <0x4120_0000 [ 64K ]>.
+Slave segment '/axi_gpio_0/S_AXI/Reg' is being assigned into address space '/rv_pl_0/m_inst_axi' at <0x4120_0000 [ 64K ]>.
+endgroup
+set_property location {1 210 -14} [get_bd_cells axi_gpio_0]
+save_bd_design
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/design_1.bd> 
+Wrote  : </u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+close_bd_design [get_bd_designs design_1]
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 20 05:46:48 2026...

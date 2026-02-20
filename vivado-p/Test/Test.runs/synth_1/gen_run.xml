@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1771524161" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/rv_pl.dcp">
-  <File Type="PA-TCL" Name="rv_pl.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="rv_pl_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="rv_pl_reports.tcl"/>
-  <File Type="RDS-RDS" Name="rv_pl.vds"/>
-  <File Type="RDS-UTIL" Name="rv_pl_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="rv_pl_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="rv_pl.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="rv_pl_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="rv_pl_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1771565321" LaunchIncrCheckpoint="$PPRDIR/../../Test/Test.srcs/utils_1/imports/synth_1/rv_pl.dcp">
+  <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/define.v">
       <FileInfo SFType="VHeader">
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/define.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/define.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -22,7 +37,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/ALU.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/ALU.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/ALU.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -31,7 +47,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/ALU_Decoder.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/ALU_Decoder.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/ALU_Decoder.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -40,7 +57,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Controller.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Controller.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Controller.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -49,7 +67,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Datapath.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Datapath.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Datapath.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -58,7 +77,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Hazard_Unit.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Hazard_Unit.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Hazard_Unit.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -67,7 +87,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Mux.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Mux.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Mux.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -76,7 +97,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Op_Decoder.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Op_Decoder.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Op_Decoder.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -85,7 +107,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Register_File.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Register_File.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Register_File.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -94,7 +117,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Sign_Extend.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Sign_Extend.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Sign_Extend.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -103,7 +127,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/flops.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/flops.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/flops.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -112,7 +137,8 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Pipeline_top.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Pipeline_top.v"/>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Pipeline_top.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -122,7 +148,7 @@
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Data_Memory.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Data_Memory.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Data_Memory.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -132,35 +158,19 @@
     <File Path="$PSRCDIR/sources_1/imports/riscv-single/Instruction_Memory.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Desktop/riscv-single/Instruction_Memory.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../riscv-single/Instruction_Memory.v"/>
         <Attr Name="ImportTime" Val="1771461631"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/pipeline/pipeline.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PGENDIR/sources_1/bd/pipeline/hdl/pipeline_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
+    <File Path="$PSRCDIR/component.xml">
+      <FileInfo SFType="IPXACT"/>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="rv_pl"/>
-      <Option Name="TopLib" Val="xil_defaultlib"/>
-      <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/imports/riscv-single/Pipeline_top.v"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="design_1_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -171,7 +181,7 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
-    <File Path="$PSRCDIR/utils_1/imports/synth_1/rv_pl.dcp">
+    <File Path="$PPRDIR/../../Test/Test.srcs/utils_1/imports/synth_1/rv_pl.dcp">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -184,9 +194,11 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rv_pl_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_bram_ctrl_0_0"/>
 </GenRun>

@@ -1,0 +1,342 @@
+
+*** Running vivado
+    with args -log design_1_rv_pl_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_rv_pl_0_1.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_rv_pl_0_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/var/tmp/dwe_vivado_inst/Vivado/2021.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rv_pl:1.0'. The one found in IP location '/u/halle/dwe/home_at/Desktop/Test/Test.srcs' will take precedence over the same IP in location /u/halle/dwe/home_at/Desktop/Test/Test.srcs/sources_1/imports/riscv-single
+Command: synth_design -top design_1_rv_pl_0_1 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3612045
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2596.742 ; gain = 0.000 ; free physical = 386625 ; free virtual = 795139
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_rv_pl_0_1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/synth/design_1_rv_pl_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'rv_pl' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Pipeline_top.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Register_File' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Register_File.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Register_File' (1#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Register_File.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Datapath' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Datapath.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux2' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Mux.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'mux2' (2#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Mux.v:1]
+INFO: [Synth 8-6157] synthesizing module 'flopenr' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'flopenr' (3#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:11]
+INFO: [Synth 8-6157] synthesizing module 'flopenclr' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'flopenclr' (4#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:32]
+INFO: [Synth 8-6157] synthesizing module 'Sign_Extend' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Sign_Extend.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Sign_Extend' (5#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Sign_Extend.v:3]
+INFO: [Synth 8-6157] synthesizing module 'flopclr' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr' (6#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'flopclr__parameterized0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr__parameterized0' (6#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'mux3' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Mux.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'mux3' (7#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Mux.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (8#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'flopr' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'flopr' (9#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6157] synthesizing module 'flopr__parameterized0' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'flopr__parameterized0' (9#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath' (10#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Datapath.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Controller' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Op_Decoder' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Op_Decoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Op_Decoder' (11#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Op_Decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ALU_Decoder' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU_Decoder.v:3]
+INFO: [Synth 8-226] default block is never used [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU_Decoder.v:14]
+INFO: [Synth 8-226] default block is never used [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU_Decoder.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_Decoder' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU_Decoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'flopclr__parameterized1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr__parameterized1' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'flopclr__parameterized2' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr__parameterized2' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'flopclr__parameterized3' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'flopclr__parameterized3' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:21]
+INFO: [Synth 8-6157] synthesizing module 'flopr__parameterized1' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'flopr__parameterized1' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6157] synthesizing module 'flopr__parameterized2' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'flopr__parameterized2' (12#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Controller' (13#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Hazard_Unit' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Hazard_Unit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Hazard_Unit' (14#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Hazard_Unit.v:1]
+WARNING: [Synth 8-3848] Net M_sel_result in module/entity rv_pl does not have driver. [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Pipeline_top.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'rv_pl' (15#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Pipeline_top.v:3]
+WARNING: [Synth 8-7071] port 'm_inst_axi_arprot' of module 'rv_pl' is unconnected for instance 'inst' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/synth/design_1_rv_pl_0_1.v:147]
+WARNING: [Synth 8-7071] port 'm_data_axi_arprot' of module 'rv_pl' is unconnected for instance 'inst' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/synth/design_1_rv_pl_0_1.v:147]
+WARNING: [Synth 8-7071] port 'm_data_axi_awprot' of module 'rv_pl' is unconnected for instance 'inst' [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/synth/design_1_rv_pl_0_1.v:147]
+WARNING: [Synth 8-7023] instance 'inst' of module 'rv_pl' has 30 connections declared, but only 27 given [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/synth/design_1_rv_pl_0_1.v:147]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rv_pl_0_1' (16#1) [/u/halle/dwe/home_at/Desktop/Test/Test.gen/sources_1/bd/design_1/ip/design_1_rv_pl_0_1_1/synth/design_1_rv_pl_0_1.v:57]
+WARNING: [Synth 8-7129] Port funct7[6] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[4] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[3] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[2] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[1] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port funct7[0] in module Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[6] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[5] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[4] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[3] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[2] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[1] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[0] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W_we_rf in module Datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_arready in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rresp[1] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rresp[0] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rvalid in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_awready in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_wready in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bresp[1] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bresp[0] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bvalid in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_arready in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rresp[1] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rresp[0] in module rv_pl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rvalid in module rv_pl is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2596.742 ; gain = 0.000 ; free physical = 386050 ; free virtual = 794564
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2596.742 ; gain = 0.000 ; free physical = 385625 ; free virtual = 794140
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2596.742 ; gain = 0.000 ; free physical = 385627 ; free virtual = 794142
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2596.742 ; gain = 0.000 ; free physical = 385755 ; free virtual = 794269
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2660.609 ; gain = 0.000 ; free physical = 386146 ; free virtual = 794660
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2660.609 ; gain = 0.000 ; free physical = 386256 ; free virtual = 794771
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386328 ; free virtual = 794842
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386337 ; free virtual = 794851
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386303 ; free virtual = 794818
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386259 ; free virtual = 794774
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 3     
+	   3 Input   32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 47    
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	  33 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 17    
+	   2 Input    5 Bit        Muxes := 3     
+	   4 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   8 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 35    
+	   8 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_wstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_wstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_wstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_wstrb[0] driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_bready driven by constant 1
+INFO: [Synth 8-3917] design design_1_rv_pl_0_1 has port m_data_axi_rready driven by constant 1
+WARNING: [Synth 8-7129] Port Ins[6] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[5] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[4] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[3] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[2] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[1] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Ins[0] in module Sign_Extend is either unconnected or has no load
+WARNING: [Synth 8-7129] Port W_we_rf in module Datapath is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_arready in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rresp[1] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rresp[0] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_inst_axi_rvalid in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_awready in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_wready in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bresp[1] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bresp[0] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_bvalid in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_arready in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rresp[1] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rresp[0] in module design_1_rv_pl_0_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_data_axi_rvalid in module design_1_rv_pl_0_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 385869 ; free virtual = 794386
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386064 ; free virtual = 794580
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386040 ; free virtual = 794556
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386518 ; free virtual = 795034
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386063 ; free virtual = 794580
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386025 ; free virtual = 794542
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386104 ; free virtual = 794621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386128 ; free virtual = 794645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386183 ; free virtual = 794700
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386157 ; free virtual = 794674
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    40|
+|2     |LUT1   |    34|
+|3     |LUT2   |   253|
+|4     |LUT3   |   161|
+|5     |LUT4   |    82|
+|6     |LUT5   |   239|
+|7     |LUT6   |  1046|
+|8     |MUXF7  |   135|
+|9     |FDCE   |   523|
+|10    |FDRE   |   992|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386086 ; free virtual = 794603
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2660.609 ; gain = 0.000 ; free physical = 386299 ; free virtual = 794816
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 2660.609 ; gain = 63.867 ; free physical = 386299 ; free virtual = 794816
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2660.609 ; gain = 0.000 ; free physical = 386192 ; free virtual = 794709
+INFO: [Netlist 29-17] Analyzing 175 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2660.609 ; gain = 0.000 ; free physical = 386363 ; free virtual = 794880
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: a44b0563
+INFO: [Common 17-83] Releasing license: Synthesis
+71 Infos, 56 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 2660.609 ; gain = 64.031 ; free physical = 386508 ; free virtual = 795025
+INFO: [Common 17-1381] The checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_rv_pl_0_1_synth_1/design_1_rv_pl_0_1.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_rv_pl_0_1, cache-ID = f9ae02d55e2a9218
+INFO: [Coretcl 2-1174] Renamed 37 cell refs.
+INFO: [Common 17-1381] The checkpoint '/u/halle/dwe/home_at/Desktop/Test/Test.runs/design_1_rv_pl_0_1_synth_1/design_1_rv_pl_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_rv_pl_0_1_utilization_synth.rpt -pb design_1_rv_pl_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 20 05:41:50 2026...

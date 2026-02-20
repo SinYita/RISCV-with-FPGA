@@ -6,14 +6,10 @@
 # Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 # 
 
-echo "This script was generated under a different operating system."
-echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
-exit
-
 if [ -z "$PATH" ]; then
-  PATH=D:/Xilinx/Vivado/2021.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2021.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2021.2/bin
+  PATH=/var/tmp/dwe_vivado_inst/Vivado/2021.2/ids_lite/ISE/bin/lin64:/var/tmp/dwe_vivado_inst/Vivado/2021.2/bin
 else
-  PATH=D:/Xilinx/Vivado/2021.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2021.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2021.2/bin:$PATH
+  PATH=/var/tmp/dwe_vivado_inst/Vivado/2021.2/ids_lite/ISE/bin/lin64:/var/tmp/dwe_vivado_inst/Vivado/2021.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/FPGA/RISCV-with-FPGA/vivado-p/Test/Test.runs/synth_1'
+HD_PWD='/u/halle/dwe/home_at/Desktop/Test/Test.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log rv_pl.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rv_pl.tcl
+EAStep vivado -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl

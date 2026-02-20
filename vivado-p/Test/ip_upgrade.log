@@ -1,0 +1,139 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Feb 20 05:40:36 2026
+| Host         : halle.cli.ito.cit.tum.de running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rv_pl_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_rv_pl_0_1 (user.org:user:rv_pl:1.0 (Rev. 4)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Feb 20 05:33:36 2026
+| Host         : halle.cli.ito.cit.tum.de running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rv_pl_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_rv_pl_0_1 (user.org:user:rv_pl:1.0 (Rev. 4)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Feb 20 05:23:29 2026
+| Host         : halle.cli.ito.cit.tum.de running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rv_pl_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_rv_pl_0_1 (user.org:user:rv_pl:1.0 (Rev. 4)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Feb 20 04:57:19 2026
+| Host         : halle.cli.ito.cit.tum.de running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rv_pl_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_rv_pl_0_0 (user.org:user:rv_pl:1.0) from (Rev. 2) to (Rev. 4)
+
+2. Addressing Information
+-------------------------
+
+Detected addressing differences while upgrading 'design_1_rv_pl_0_0'. These changes may impact your design.
+
+
+-Upgrade has added address space 'm_inst_axi'
+
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Feb 20 04:27:14 2026
+| Host         : halle.cli.ito.cit.tum.de running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rv_pl_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_1_rv_pl_0_0 (user.org:user:rv_pl:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Fri Feb 20 03:48:27 2026
+| Host         : halle.cli.ito.cit.tum.de running 64-bit Ubuntu 24.04.2 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_rv_pl_0_1'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the conversion of design_1_rv_pl_0_1 (user.org:user:rv_pl:1.0 (Rev. 2)) to Vivado generation flows.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_rv_pl_0_1'.
+
+
+-Upgrade has added interface 'M_INST_AXI' (xilinx.com:interface:aximm:1.0)
+
+
