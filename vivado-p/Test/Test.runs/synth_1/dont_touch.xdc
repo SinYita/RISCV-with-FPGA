@@ -33,4 +33,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_ax
 # IP: bd/design_1/ip/design_1_rv_pl_0_1_1/design_1_rv_pl_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_rv_pl_0_1 || ORIG_REF_NAME==design_1_rv_pl_0_1} -quiet] -quiet
 
-# XDC: /u/halle/dwe/home_at/Desktop/RISCV-with-FPGA/vivado-p/Test/Test.gen/sources_1/bd/design_1/design_1_ooc.xdc
+# XDC: d:/FPGA/final/RISCV-with-FPGA/vivado-p/Test/Test.gen/sources_1/bd/design_1/design_1_ooc.xdc

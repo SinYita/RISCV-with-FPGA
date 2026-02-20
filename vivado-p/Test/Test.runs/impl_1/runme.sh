@@ -6,10 +6,14 @@
 # Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 # 
 
+echo "This script was generated under a different operating system."
+echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executing this script"
+exit
+
 if [ -z "$PATH" ]; then
-  PATH=/var/tmp/dwe_vivado_inst/Vivado/2021.2/ids_lite/ISE/bin/lin64:/var/tmp/dwe_vivado_inst/Vivado/2021.2/bin
+  PATH=D:/Xilinx/Vivado/2021.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2021.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2021.2/bin
 else
-  PATH=/var/tmp/dwe_vivado_inst/Vivado/2021.2/ids_lite/ISE/bin/lin64:/var/tmp/dwe_vivado_inst/Vivado/2021.2/bin:$PATH
+  PATH=D:/Xilinx/Vivado/2021.2/ids_lite/ISE/bin/nt64;D:/Xilinx/Vivado/2021.2/ids_lite/ISE/lib/nt64:D:/Xilinx/Vivado/2021.2/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/u/halle/dwe/home_at/Desktop/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1'
+HD_PWD='D:/FPGA/final/RISCV-with-FPGA/vivado-p/Test/Test.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 
 
