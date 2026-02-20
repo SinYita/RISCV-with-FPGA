@@ -21,7 +21,7 @@ bubble_sort_code = [
     0x42002fb7, 0xffcf8f93, 0xdeadcf37, 0xeeff0f13, 
     0x01efa023, 0x0000006f
 ]
-
+gpio_mmio.write(0x8,0x0)
 random_data = [random.randint(0, 255) for _ in range(32)]
 print(f"array: {random_data}")
 
@@ -38,24 +38,21 @@ print("All set !")
 
 #release the reset signal
 print("Starting the Riscv core...")
-gpio_mmio.write(0x0, 0x0) # reset
-time.sleep(0.1)
-gpio_mmio.write(0x0, 0x1) # start
-
+print("Releasing Reset signal via GPIO2...")
+gpio_mmio.write(0x8, 0x1)
 start_time = time.time()
 timeout = 5 
-found_done = False
 
 while (time.time() - start_time) < timeout:
-    flag = data_mmio.read(0x1FFC)
-    if flag == 0xDEADBEEF:
-        print(f"Done signal detected ! time used : {time.time()-start_time:.4f}s")
+    flag = data_mmio.read(0x1FFC)       # 软件标志位 (Magic Number)
+    hw_flag = gpio_mmio.read(0x0) & 0x1 # 硬件引脚信号 (GPIO Channel 1)
+
+    if flag == 0xDEADBEEF or hw_flag == 1:
+        print(f"Done signal detected! (Mem: {hex(flag)}, HW: {hw_flag})")
+        print(f"Time used: {time.time()-start_time:.4f}s")
         found_done = True
         break
     time.sleep(0.01)
-
-if not found_done:
-    print("Time out")
 
 sorted_result = []
 for i in range(32):
