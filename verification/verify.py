@@ -73,6 +73,23 @@ bubble_sort_code = [
     0xEEFE8E93, 0x01DE2023, 0x0000006F
 ]
 
+mini_done_code = [
+    0x42002E37,  # lui  t3,0x42002
+    0xFFCE0E13,  # addi t3,t3,-4   => 0x42001FFC
+    0xDEADCEB7,  # lui  t4,0xDEADC
+    0xEEFE8E93,  # addi t4,t4,-0x111 => 0xDEADBEEF
+    0x01DE2023,  # sw   t4,0(t3)
+    0x0000006F,  # jal  x0,0
+]
+
+mini_data0_code = [
+    0x42000437,  # lui  s0,0x42000  -> s0=0x42000000
+    0x111112B7,  # lui  t0,0x11111  -> t0=0x11111000
+    0x11128293,  # addi t0,t0,0x111 -> t0=0x11111111
+    0x00542023,  # sw   t0,0(s0)
+    0x0000006F,  # jal  x0,0
+]
+
 # after loading instructions
 # print("IMEM[0] written =", hex(bubble_sort_code[0]))
 # print("IMEM[0] readback =", hex(inst_mmio.read(0)))
@@ -137,6 +154,33 @@ def run_mode_A(timeout=2.0):
     print("PASS" if result == EXPECTED_A else "FAIL")
 
 
+def run_mini_done(timeout=1.0):
+    set_reset_n(0)
+    time.sleep(0.01)
+
+    data_mmio.write(DONE_OFF, 0x0)
+
+    for i, w in enumerate(mini_done_code):
+        inst_mmio.write(i*4, w)
+
+    # readback confirm
+    print("IMEM[0] got", hex(inst_mmio.read(0)))
+
+    set_reset_n(1)
+    time.sleep(0.005)
+
+    start = time.time()
+    while time.time() - start < timeout:
+        flag = data_mmio.read(DONE_OFF)
+        if flag == 0xDEADBEEF:
+            print("[PASS] mini done store works:", hex(flag))
+            return
+        time.sleep(0.01)
+
+    print("[FAIL] mini done store not observed, flag=",
+          hex(data_mmio.read(DONE_OFF)))
+
+
 # -----------------------------
 # MODE B: 若你改了 assembly 支援 Python 寫入的 N=32
 # (只有當你的程式不會再覆蓋 data 且確實排序 32 個才用)
@@ -175,4 +219,4 @@ def run_mode_B(timeout=2.0, n=32):
 # Run the safe one first
 # -----------------------------
 print(f"DONE_ADDR = {hex(DONE_ADDR)}")
-run_mode_A()
+run_mini_done()
