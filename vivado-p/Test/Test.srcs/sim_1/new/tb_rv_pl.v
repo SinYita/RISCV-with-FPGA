@@ -1,116 +1,245 @@
 `timescale 1ns/1ps
 
-module tb_rv_pl;
+module tb_rv_pl_axi;
 
-  // --- 时钟与复位 ---
   reg clk = 0;
   reg rst_n = 0;
 
-  // --- DUT 端口连接线 ---
-  wire [31:0] imem_addr;
-  wire [31:0] imem_rdata; // 这里的引脚改回 wire，由 TB 的内存模型驱动
-  wire        dmem_we;
-  wire [31:0] dmem_addr;
-  wire [31:0] dmem_wdata;
-  wire [31:0] dmem_rdata; // 这里的引脚改回 wire
-  wire        done;
+  // -------------------------
+  // DUT AXI ports (match rv_pl)
+  // -------------------------
+  wire [31:0] m_inst_axi_araddr;
+  wire        m_inst_axi_arvalid;
+  reg         m_inst_axi_arready;
+  reg  [31:0] m_inst_axi_rdata;
+  reg  [1:0]  m_inst_axi_rresp;
+  reg         m_inst_axi_rvalid;
+  wire        m_inst_axi_rready;
+  wire [2:0]  m_inst_axi_arprot;
 
-  // --- 内部寄存器用于模拟存储器行为 ---
-  reg [31:0] imem_rdata_reg;
-  reg [31:0] dmem_rdata_reg;
-  assign imem_rdata = imem_rdata_reg;
-  assign dmem_rdata = dmem_rdata_reg;
+  wire [31:0] m_data_axi_awaddr;
+  wire        m_data_axi_awvalid;
+  reg         m_data_axi_awready;
+  wire [31:0] m_data_axi_wdata;
+  wire [3:0]  m_data_axi_wstrb;
+  wire        m_data_axi_wvalid;
+  reg         m_data_axi_wready;
+  reg  [1:0]  m_data_axi_bresp;
+  reg         m_data_axi_bvalid;
+  wire        m_data_axi_bready;
 
-  // --- 实例化 DUT ---
+  wire [31:0] m_data_axi_araddr;
+  wire        m_data_axi_arvalid;
+  reg         m_data_axi_arready;
+  reg  [31:0] m_data_axi_rdata;
+  reg  [1:0]  m_data_axi_rresp;
+  reg         m_data_axi_rvalid;
+  wire        m_data_axi_rready;
+  wire [2:0]  m_data_axi_arprot;
+  wire [2:0]  m_data_axi_awprot;
+
+  wire done;
+
+  // -------------------------
+  // Instantiate DUT
+  // -------------------------
   rv_pl dut (
     .clk(clk),
     .rst_n(rst_n),
-    .inst_addr(imem_addr),
-    .inst_rdata(imem_rdata),
-    .data_addr(dmem_addr),
-    .data_wdata(dmem_wdata),
-    .data_rdata(dmem_rdata),
-    .data_we(dmem_we),
+
+    .m_inst_axi_araddr (m_inst_axi_araddr),
+    .m_inst_axi_arvalid(m_inst_axi_arvalid),
+    .m_inst_axi_arready(m_inst_axi_arready),
+    .m_inst_axi_rdata  (m_inst_axi_rdata),
+    .m_inst_axi_rresp  (m_inst_axi_rresp),
+    .m_inst_axi_rvalid (m_inst_axi_rvalid),
+    .m_inst_axi_rready (m_inst_axi_rready),
+    .m_inst_axi_arprot (m_inst_axi_arprot),
+
+    .m_data_axi_awaddr (m_data_axi_awaddr),
+    .m_data_axi_awvalid(m_data_axi_awvalid),
+    .m_data_axi_awready(m_data_axi_awready),
+    .m_data_axi_wdata  (m_data_axi_wdata),
+    .m_data_axi_wstrb  (m_data_axi_wstrb),
+    .m_data_axi_wvalid (m_data_axi_wvalid),
+    .m_data_axi_wready (m_data_axi_wready),
+    .m_data_axi_bresp  (m_data_axi_bresp),
+    .m_data_axi_bvalid (m_data_axi_bvalid),
+    .m_data_axi_bready (m_data_axi_bready),
+
+    .m_data_axi_araddr (m_data_axi_araddr),
+    .m_data_axi_arvalid(m_data_axi_arvalid),
+    .m_data_axi_arready(m_data_axi_arready),
+    .m_data_axi_rdata  (m_data_axi_rdata),
+    .m_data_axi_rresp  (m_data_axi_rresp),
+    .m_data_axi_rvalid (m_data_axi_rvalid),
+    .m_data_axi_rready (m_data_axi_rready),
+    .m_data_axi_arprot (m_data_axi_arprot),
+    .m_data_axi_awprot (m_data_axi_awprot),
+
     .done(done)
   );
 
-  // 时钟：100MHz (10ns 周期)
+  // clock 100MHz
   always #5 clk = ~clk;
 
-  // --- 存储器模型定义 ---
+  // -------------------------
+  // Memory models
+  // -------------------------
   localparam IMEM_WORDS = 4096;
   localparam DMEM_WORDS = 4096;
+
+  // CPU data address space base (must match your program)
+  localparam DMEM_BASE  = 32'h4200_0000;
+  localparam DONE_ADDR  = 32'h4200_1FFC;
+
   reg [31:0] imem [0:IMEM_WORDS-1];
   reg [31:0] dmem [0:DMEM_WORDS-1];
 
-  // 地址转索引 (字节地址 >> 2)
-  wire [31:0] imem_widx = imem_addr >> 2;
-  wire [31:0] dmem_widx = dmem_addr >> 2;
+  // Instruction address is plain PC (0-based) -> word index
+  wire [31:0] inst_idx  = m_inst_axi_araddr >> 2;
 
-  // --- 同步读取逻辑 (模拟 FPGA BRAM: 1-cycle latency) ---
-  always @(posedge clk) begin
-    // 指令内存读取
-    if (imem_widx < IMEM_WORDS)
-      imem_rdata_reg <= imem[imem_widx];
-    else
-      imem_rdata_reg <= 32'h00000013; // NOP (addi x0, x0, 0)
+  // Data address is in 0x4200_0000 region -> map to dmem[0..]
+  wire [31:0] data_ridx = (m_data_axi_araddr - DMEM_BASE) >> 2;
+  wire [31:0] data_widx = (m_data_axi_awaddr - DMEM_BASE) >> 2;
 
-    // 数据内存读取
-    if (dmem_widx < DMEM_WORDS)
-      dmem_rdata_reg <= dmem[dmem_widx];
+  // -------------------------
+  // Ultra-lenient AXI-Lite slave behavior (zero wait)
+  // -------------------------
+  always @(*) begin
+    // Always ready
+    m_inst_axi_arready = 1'b1;
+    m_data_axi_arready = 1'b1;
+    m_data_axi_awready = 1'b1;
+    m_data_axi_wready  = 1'b1;
+
+    // Always OKAY
+    m_inst_axi_rresp = 2'b00;
+    m_data_axi_rresp = 2'b00;
+    m_data_axi_bresp = 2'b00;
+
+    // Read returns immediately when ARVALID
+    m_inst_axi_rvalid = m_inst_axi_arvalid;
+    if (inst_idx < IMEM_WORDS)
+      m_inst_axi_rdata = imem[inst_idx];
     else
-      dmem_rdata_reg <= 32'h0;
+      m_inst_axi_rdata = 32'h00000013; // NOP
+
+    m_data_axi_rvalid = m_data_axi_arvalid;
+    if (data_ridx < DMEM_WORDS)
+      m_data_axi_rdata = dmem[data_ridx];
+    else
+      m_data_axi_rdata = 32'h0;
+
+    // Write response valid immediately when AWVALID & WVALID
+    m_data_axi_bvalid = m_data_axi_awvalid & m_data_axi_wvalid;
   end
 
-  // --- 数据内存写入逻辑 ---
+  // actually perform writes on clock edge
   always @(posedge clk) begin
-    if (dmem_we) begin
-      if (dmem_widx < DMEM_WORDS)
-        dmem[dmem_widx] <= dmem_wdata;
+    if (m_data_axi_awvalid && m_data_axi_wvalid) begin
+      if (data_widx < DMEM_WORDS) begin
+        // assume full word store
+        dmem[data_widx] <= m_data_axi_wdata;
+      end
     end
   end
 
-  // --- 核心修改：使用 done 信号结束仿真 ---
+  // -------------------------
+  // Bubble sort result check
+  // -------------------------
+  localparam DATA_BASE = 32'h4200_0000; // array starts here (matches program)
+
+  reg [31:0] expected [0:7];
+  integer k;
+  reg pass;
+
+  initial begin
+    expected[0]=32'd1;
+    expected[1]=32'd2;
+    expected[2]=32'd3;
+    expected[3]=32'd4;
+    expected[4]=32'd5;
+    expected[5]=32'd7;
+    expected[6]=32'd8;
+    expected[7]=32'd9;
+  end
+
+  task check_sorted;
+    reg [31:0] val;
+    integer idx;
+    begin
+      pass = 1;
+
+      // DATA_BASE == DMEM_BASE in this setup, so array lives at dmem[0..7]
+      for (k=0; k<8; k=k+1) begin
+        idx = ((DATA_BASE - DMEM_BASE) >> 2) + k;
+        if (idx < 0 || idx >= DMEM_WORDS) begin
+          $display("[FAIL] TB mapping error: idx out of range (%0d)", idx);
+          pass = 0;
+        end else begin
+          val = dmem[idx];
+          if (val !== expected[k]) begin
+            $display("[FAIL] bubble sort mismatch at idx=%0d addr=%h got=%h expect=%h",
+                     k, DATA_BASE + (k<<2), val, expected[k]);
+            pass = 0;
+          end
+        end
+      end
+
+      if (pass) begin
+        $display("[PASS] bubble sort OK: array sorted correctly.");
+      end else begin
+        $display("[FAIL] bubble sort FAILED: array not sorted.");
+      end
+    end
+  endtask
+
+  // -------------------------
+  // Instrumentation: watch DONE_ADDR store
+  // -------------------------
+  always @(posedge clk) begin
+    if (m_data_axi_awvalid && m_data_axi_wvalid) begin
+      if (m_data_axi_awaddr == DONE_ADDR) begin
+        $display("[TB] STORE to DONE_ADDR: data=%h time=%0t", m_data_axi_wdata, $time);
+      end
+    end
+  end
+
+  // done handling: check + finish
   always @(posedge clk) begin
     if (rst_n && done) begin
-      $display("\n==================================================");
-      $display("[PASS] DONE Signal Detected!");
-      $display("Time      : %0t", $time);
-      $display("Final Write: Addr=%h, Data=%h", dmem_addr, dmem_wdata);
-      $display("==================================================\n");
+      $display("[PASS] done asserted at t=%0t", $time);
+      $display("[TB] checking bubble sort result...");
+      check_sorted();
       $finish;
     end
   end
 
-  // --- 初始化与加载 ---
-  task load_imem_hex(input [1023:0] filename);
-    begin
-      $display("Loading IMEM from %0s ...", filename);
-      $readmemh(filename, imem);
-    end
-  endtask
-
+  // -------------------------
+  // Program load / reset / timeout
+  // -------------------------
+  integer i;
   initial begin
-    // 1. 初始化内存
-    for (integer j = 0; j < IMEM_WORDS; j = j + 1) imem[j] = 32'h00000013;
-    for (integer j = 0; j < DMEM_WORDS; j = j + 1) dmem[j] = 32'h0;
+    // init
+    for (i=0;i<IMEM_WORDS;i=i+1)
+      imem[i] = 32'h00000013;
+    for (i=0;i<DMEM_WORDS;i=i+1)
+      dmem[i] = 32'h0;
 
-    // 2. 波形 dump
-    $dumpfile("tb_rv_pl.vcd");
-    $dumpvars(0, tb_rv_pl);
+    // TODO: change path to your bubble hex
+    // Example:
+    // $readmemh("C:\\Users\\thoch\\Documents\\HDL\\riscv-fpga\\RTL\\testbench_v\\bubble_sort_done.hex", imem);
+    $readmemh("C:\\Users\\thoch\\Documents\\HDL\\riscv-fpga\\RTL\\testbench_v\\smoke_done.hex", imem);
 
-    // 3. 加载程序
-    load_imem_hex("smoke_done.hex");
-
-    // 4. 执行复位
+    // reset
     rst_n = 0;
-    repeat (10) @(posedge clk);
+    repeat(10) @(posedge clk);
     rst_n = 1;
-    $display("CPU Reset Released. Running...");
 
-    // 5. 超时监控
-    repeat (1000) @(posedge clk); // smoke test 不需要 20000 这么久
-    $display("\n[FAIL] Timeout: DONE signal not asserted.");
+    // timeout (bubble sort is longer than smoke)
+    repeat(50000) @(posedge clk);
+    $display("[FAIL] timeout, done not asserted");
     $finish;
   end
 
