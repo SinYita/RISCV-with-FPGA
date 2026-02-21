@@ -1,18 +1,32 @@
 # ===============================
 # Vivado generated directories
 # ===============================
-vivado-p/*.cache/
-vivado-p/*.runs/
-vivado-p/*.sim/
-vivado-p/*.gen/
-vivado-p/*.hw/
-vivado-p/*.ip_user_files/
-vivado-p/*.tmp/
-vivado-p/.Xil/
+Hardware/Vivado/riscv-single-cycle/*.cache/
+Hardware/Vivado/riscv-single-cycle/*.runs/
+Hardware/Vivado/riscv-single-cycle/*.sim/
+Hardware/Vivado/riscv-single-cycle/*.gen/
+Hardware/Vivado/riscv-single-cycle/*.hw/
+Hardware/Vivado/riscv-single-cycle/*.ip_user_files/
+Hardware/Vivado/riscv-single-cycle/*.tmp/
+Hardware/Vivado/riscv-single-cycle/.Xil/
+
+Hardware/Vivado/Test/*.cache/
+Hardware/Vivado/Test/*.runs/
+Hardware/Vivado/Test/*.sim/
+Hardware/Vivado/Test/*.gen/
+Hardware/Vivado/Test/*.hw/
+Hardware/Vivado/Test/*.ip_user_files/
+Hardware/Vivado/Test/*.tmp/
+Hardware/Vivado/Test/.Xil/
+
+
 
 # Vivado logs
-vivado-p/*.log
-vivado-p/*.jou
+Hardware/Vivado/riscv-single-cycle/*.log
+Hardware/Vivado/riscv-single-cycle/*.jou
+
+Hardware/Vivado/Teste/*.log
+Hardware/Vivado/Teste/*.jou
 
 # ===============================
 # OS / Editor junk
