@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Product Version: Vivado v2021.2 (64-bit)              -->
-<!-- SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021  -->
+<!-- SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021  -->
 <!--                                                         -->
 <!-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.   -->
 <!-- Oct 19 2021                                             -->
@@ -13,7 +13,7 @@
     <AddressSpace Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_0" Begin="1073741824" End="1073750015">
       <AddressSpaceRange Name="design_1_i_processing_system7_0.design_1_i_axi_bram_ctrl_0" Begin="1073741824" End="1073750015" CoreMemory_Width="0" MemoryType="RAM_SP" MemoryConfiguration="">
         <BusBlock>
-          <BitLane MemType="RAMB36" Placement="X3Y20" Read_Width="0" SLR_INDEX="-1">
+          <BitLane MemType="RAMB36" Placement="X3Y18" Read_Width="0" SLR_INDEX="-1">
             <DataWidth MSB="15" LSB="0"/>
             <AddressRange Begin="0" End="2047"/>
             <BitLayout pattern=""/>

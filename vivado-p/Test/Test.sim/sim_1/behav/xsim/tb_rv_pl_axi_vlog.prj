@@ -1,5 +1,27 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../Test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../Test.gen/sources_1/bd/design_1/ipshared/3007/hdl" --include "../../../../Test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../Test.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../Test.srcs/sources_1/imports/riscv-single" --include "C:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+verilog xil_defaultlib  --include "../../../../Test.gen/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../Test.gen/sources_1/bd/design_1/ipshared/3007/hdl" --include "../../../../Test.gen/sources_1/bd/design_1/ipshared/f0b6/hdl/verilog" --include "../../../../Test.gen/sources_1/bd/design_1/ipshared/66be/hdl/verilog" --include "../../../../Test.gen/sources_1/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single" --include "../../../../Test.srcs/sources_1/imports/riscv-single" --include "C:/Xilinx/Vivado/2021.2/data/xilinx_vip/include" \
+"../../../../Test.ip_user_files/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_sim_netlist.v" \
+"../../../../Test.ip_user_files/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0_sim_netlist.v" \
+"../../../../Test.ip_user_files/bd/design_1/ip/design_1_axi_gpio_0_1_1/design_1_axi_gpio_0_1_sim_netlist.v" \
+"../../../../Test.ip_user_files/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0_sim_netlist.v" \
+"../../../../Test.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_0_0_1/sim/design_1_blk_mem_gen_0_0.v" \
+"../../../../Test.ip_user_files/bd/design_1/ip/design_1_rst_ps7_0_50M_0_1/design_1_rst_ps7_0_50M_0_sim_netlist.v" \
+"../../../../Test.ip_user_files/bd/design_1/ip/design_1_axi_bram_ctrl_1_bram_0/sim/design_1_axi_bram_ctrl_1_bram_0.v" \
+"../../../../Test.ip_user_files/bd/design_1/ip/design_1_axi_smc_2/design_1_axi_smc_2_sim_netlist.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/ALU_Decoder.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Controller.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Datapath.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Hazard_Unit.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Mux.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Op_Decoder.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Register_File.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Sign_Extend.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/flops.v" \
+"../../../../Test.ip_user_files/bd/design_1/ipshared/5c02/sources_1/imports/riscv-single/Pipeline_top.v" \
+"../../../../Test.ip_user_files/bd/design_1/ip/design_1_rv_pl_0_1_1/sim/design_1_rv_pl_0_1.v" \
+"../../../../Test.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../Test.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
 "../../../../Test.srcs/sources_1/imports/riscv-single/ALU.v" \
 "../../../../Test.srcs/sources_1/imports/riscv-single/ALU_Decoder.v" \
 "../../../../Test.srcs/sources_1/imports/riscv-single/Controller.v" \
@@ -7,10 +29,12 @@ verilog xil_defaultlib  --include "../../../../Test.gen/sources_1/bd/design_1/ip
 "../../../../Test.srcs/sources_1/imports/riscv-single/Hazard_Unit.v" \
 "../../../../Test.srcs/sources_1/imports/riscv-single/Mux.v" \
 "../../../../Test.srcs/sources_1/imports/riscv-single/Op_Decoder.v" \
-"../../../../Test.srcs/sources_1/imports/riscv-single/Pipeline_top.v" \
 "../../../../Test.srcs/sources_1/imports/riscv-single/Register_File.v" \
 "../../../../Test.srcs/sources_1/imports/riscv-single/Sign_Extend.v" \
 "../../../../Test.srcs/sources_1/imports/riscv-single/flops.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Pipeline_top.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Data_Memory.v" \
+"../../../../Test.srcs/sources_1/imports/riscv-single/Instruction_Memory.v" \
 "../../../../Test.srcs/sim_1/new/tb_rv_pl.v" \
 
 # compile glbl module
