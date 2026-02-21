@@ -2,6 +2,7 @@
 
 module Datapath(
     input  wire        clk, rst_n,
+    input  wire        axi_stall,  // 【新增】AXI 全局停顿信号
     // F
     output wire [31:0] F_pc,
     input  wire [31:0] F_instr,
@@ -41,32 +42,27 @@ module Datapath(
     wire [31:0] E_alu_src_a, E_rf_wd_fwd, E_alu_src_b;
     wire [31:0] E_alu_result;
     
-
     wire [31:0] M_PC_P4;
     
-
     wire [31:0] W_alu_o;
     wire [31:0] W_dm_rd;
     wire [31:0] W_PC_P4;
     
-    
-    //F
-    // PC mux
+    // ================== F 阶段 ==================
     mux2 #(32) pcfmux(F_PC_P4, E_target_PC, E_pcsrc, F_pc_next);
     
-    flopenr #(32) pcfflopen(clk, rst_n, ~F_stall, F_pc_next, F_pc);
+    // 【修改】PC 更新条件加入 ~axi_stall
+    flopenr #(32) pcfflopen(clk, rst_n, ~F_stall & ~axi_stall, F_pc_next, F_pc);
     
-    // PC + 4 adder
     assign F_PC_P4 = F_pc + 32'd4;
     
-    //F -> D
+    // ================== F -> D ==================
+    // 【修改】使能端加入 ~axi_stall
+    flopenclr #(32) InstrDflopenclr(clk, rst_n, D_flush, ~D_stall & ~axi_stall, F_instr, D_instr);
+    flopenclr #(32) PCDflopenclr(clk, rst_n, D_flush, ~D_stall & ~axi_stall, F_pc, D_pc);
+    flopenclr #(32) PCPlus4Dflopenclr(clk, rst_n, D_flush, ~D_stall & ~axi_stall, F_PC_P4, D_PC_P4);
     
-    flopenclr #(32) InstrDflopenclr(clk, rst_n, D_flush, ~D_stall, F_instr, D_instr);
-    flopenclr #(32) PCDflopenclr(clk, rst_n, D_flush, ~D_stall, F_pc, D_pc);
-    flopenclr #(32) PCPlus4Dflopenclr(clk, rst_n, D_flush, ~D_stall, F_PC_P4, D_PC_P4);
-    
-    //D
-    
+    // ================== D 阶段 ==================
     assign D_rf_a1 = D_instr[19:15];
     assign D_rf_a2 = D_instr[24:20];
     
@@ -76,23 +72,20 @@ module Datapath(
         .ImmExt(D_imm_ext)
     );
     
-    //D->E
+    // ================== D -> E ==================
+    // 【修改】原 flopclr 换成 flopenclr，加入 ~axi_stall 使能
+    flopenclr #(32) RD1Eflopclr(clk, rst_n, E_flush, ~axi_stall, D_rf_rd1, E_rf_rd1);
+    flopenclr #(32) RD2Eflopclr(clk, rst_n, E_flush, ~axi_stall, D_rf_rd2, E_rf_rd2);
+    flopenclr #(32) PCEflopclr(clk, rst_n, E_flush, ~axi_stall, D_pc, E_pc);
+    flopenclr #(5)  Rs1Eflopclr(clk, rst_n, E_flush, ~axi_stall, D_rf_a1, E_rf_a1);
+    flopenclr #(5)  Rs2Eflopclr(clk, rst_n, E_flush, ~axi_stall, D_rf_a2, E_rf_a2);
+    flopenclr #(5)  RdEflopclr(clk, rst_n, E_flush, ~axi_stall, D_instr[11:7], E_rf_a3);
+    flopenclr #(32) ImmExtEflopclr(clk, rst_n, E_flush, ~axi_stall, D_imm_ext, E_imm_ext);
+    flopenclr #(32) PCPlus4Eflopclr(clk, rst_n, E_flush, ~axi_stall, D_PC_P4, E_PC_P4);
     
-    flopclr #(32) RD1Eflopclr(clk, rst_n, E_flush, D_rf_rd1, E_rf_rd1);
-    flopclr #(32) RD2Eflopclr(clk, rst_n, E_flush, D_rf_rd2, E_rf_rd2);
-    flopclr #(32) PCEflopclr(clk, rst_n, E_flush, D_pc, E_pc);
-    flopclr #(5)  Rs1Eflopclr(clk, rst_n, E_flush, D_rf_a1, E_rf_a1);
-    flopclr #(5)  Rs2Eflopclr(clk, rst_n, E_flush, D_rf_a2, E_rf_a2);
-    flopclr #(5)  RdEflopclr(clk, rst_n, E_flush, D_instr[11:7], E_rf_a3);
-    flopclr #(32) ImmExtEflopclr(clk, rst_n, E_flush, D_imm_ext, E_imm_ext);
-    flopclr #(32) PCPlus4Eflopclr(clk, rst_n, E_flush, D_PC_P4, E_PC_P4);
-    
-    //E
-    
+    // ================== E 阶段 ==================
     mux3 #(32) SrcAEMux(E_rf_rd1, W_result, M_alu_o, E_fd_A, E_alu_src_a);
-    
     mux3 #(32) WDEMux(E_rf_rd2, W_result, M_alu_o, E_fd_B, E_rf_wd_fwd);
-    
     mux2 #(32) SrcBEmux(E_rf_wd_fwd, E_imm_ext, E_sel_alu_src_b, E_alu_src_b);
     
     assign E_target_PC = E_pc + E_imm_ext;
@@ -105,23 +98,21 @@ module Datapath(
         .Zero(ZeroE)
     );
     
-    //E-M
+    // ================== E -> M ==================
+    // 【修改】原 flopr 换成 flopenr，加入 ~axi_stall 使能
+    flopenr #(32) ALUReMflop(clk, rst_n, ~axi_stall, E_alu_result, M_alu_o);
+    flopenr #(32) WMMflop(clk, rst_n, ~axi_stall, E_rf_wd_fwd, M_rf_wd);
+    flopenr #(5)  RdMflop(clk, rst_n, ~axi_stall, E_rf_a3, M_rf_a3);
+    flopenr #(32) PCPlus4Mflop(clk, rst_n, ~axi_stall, E_PC_P4, M_PC_P4);
     
-    flopr #(32) ALUReMflop(clk, rst_n, E_alu_result, M_alu_o);
-    flopr #(32) WMMflop(clk, rst_n, E_rf_wd_fwd, M_rf_wd);
-    flopr #(5)  RdMflop(clk, rst_n, E_rf_a3, M_rf_a3);
-    flopr #(32) PCPlus4Mflop(clk, rst_n, E_PC_P4, M_PC_P4);
+    // ================== M -> W ==================
+    // 【修改】原 flopr 换成 flopenr，加入 ~axi_stall 使能
+    flopenr #(32) ALUReWBflop(clk, rst_n, ~axi_stall, M_alu_o, W_alu_o);
+    flopenr #(32) rdWflop(clk, rst_n, ~axi_stall, M_dm_rd, W_dm_rd);
+    flopenr #(5)  RdWflop(clk, rst_n, ~axi_stall, M_rf_a3, W_rf_a3);
+    flopenr #(32) PCPlus4Wflop(clk, rst_n, ~axi_stall, M_PC_P4, W_PC_P4);
     
-    // M
-    //M-W
-    
-    flopr #(32) ALUReWBflop(clk, rst_n, M_alu_o, W_alu_o);
-    flopr #(32) rdWflop(clk, rst_n, M_dm_rd, W_dm_rd);
-    flopr #(5)  RdWflop(clk, rst_n, M_rf_a3, W_rf_a3);
-    flopr #(32) PCPlus4Wflop(clk, rst_n, M_PC_P4, W_PC_P4);
-    
-    // W
-    // 
+    // ================== W 阶段 ==================
     mux3 #(32) ResultWMux(W_alu_o, W_dm_rd, W_PC_P4, W_sel_result, W_result);
     
 endmodule

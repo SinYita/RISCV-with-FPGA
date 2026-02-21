@@ -31,11 +31,15 @@ endmodule
 
 module flopenclr #(parameter WIDTH = 8)
                   (input                  clk, rst_n, clr, en, 
-                   input  [WIDTH-1:0]     d, 
+                   input      [WIDTH-1:0] d, 
                    output reg [WIDTH-1:0] q);
 
-  always @(posedge clk or negedge rst_n)
-    if (!rst_n) q <= 0;
-    else if (clr) q <= 0;
-    else if (en) q <= d;
+  always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) 
+        q <= 0;
+    else if (en) begin      // 【修复】只有在未被冻结 (en=1) 时，才允许状态变化
+        if (clr) q <= 0;    // 允许冲刷
+        else     q <= d;    // 允许传值
+    end
+  end
 endmodule
