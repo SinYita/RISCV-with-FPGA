@@ -19,6 +19,15 @@ Hardware/Vivado/Test/*.ip_user_files/
 Hardware/Vivado/Test/*.tmp/
 Hardware/Vivado/Test/.Xil/
 
+Hardware/SC/*.cache/
+Hardware/SC/*.runs/
+Hardware/SC/*.sim/
+Hardware/SC/*.gen/
+Hardware/SC/*.hw/
+Hardware/SC/*.ip_user_files/
+Hardware/SC/*.tmp/
+Hardware/SC/.Xil/
+
 
 
 # Vivado logs
