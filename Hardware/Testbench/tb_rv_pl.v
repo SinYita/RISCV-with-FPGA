@@ -5,9 +5,7 @@ module tb_rv_pl_axi;
     reg clk = 0;
     reg rst_n = 0;
 
-    // -------------------------
-    // DUT AXI ports (match rv_pl)
-    // -------------------------
+    // DUT AXI ports
     wire [31:0] m_inst_axi_araddr;
     wire        m_inst_axi_arvalid;
     reg         m_inst_axi_arready;
@@ -40,9 +38,7 @@ module tb_rv_pl_axi;
 
     wire done;
 
-    // -------------------------
     // Instantiate DUT
-    // -------------------------
     rv_pl dut (
         .clk(clk),
         .rst_n(rst_n),
@@ -83,23 +79,19 @@ module tb_rv_pl_axi;
     // clock 100MHz
     always #5 clk = ~clk;
 
-    // -------------------------
     // Memory models
-    // -------------------------
     localparam IMEM_WORDS = 4096;
     localparam DMEM_WORDS = 4096;
     localparam DMEM_BASE  = 32'h4200_0000;
     localparam DONE_ADDR  = 32'h4200_1FFC;
     
-    // 模拟真实的内存延迟 (可以把这里改成 3, 5, 10 等等来压力测试流水线)
+    //Simulate memory delay
     localparam MEM_LATENCY = 2; 
 
     reg [31:0] imem [0:IMEM_WORDS-1];
     reg [31:0] dmem [0:DMEM_WORDS-1];
 
-    // ---------------------------------------------------------
-    // 真实的 AXI-Lite Slave 模型 (带延迟状态机)
-    // ---------------------------------------------------------
+    //Real AXI-lite slave model
     
     // 1. Instruction Memory (Read Only) 状态机
     integer i_cnt;
@@ -111,25 +103,24 @@ module tb_rv_pl_axi;
             m_inst_axi_rresp   <= 0;
             i_cnt              <= 0;
         end else begin
-            // 握手结束，撤销 RVALID
+            //Ends handshake and delete RVALID
             if (m_inst_axi_rvalid && m_inst_axi_rready) begin
                 m_inst_axi_rvalid <= 0;
             end
             
-            // 接收请求并拉高 READY
+            //Accept request
             if (m_inst_axi_arvalid && !m_inst_axi_arready && !m_inst_axi_rvalid && i_cnt == 0) begin
                 m_inst_axi_arready <= 1;
-                i_cnt <= MEM_LATENCY; // 启动延迟计数器
+                i_cnt <= MEM_LATENCY; //Start delay counter
             end else if (m_inst_axi_arready) begin
-                m_inst_axi_arready <= 0; // READY 只能维持一拍
+                m_inst_axi_arready <= 0;
             end
             
-         // 延迟计数
+         //Delay counter
             if (i_cnt > 0) begin
                 i_cnt <= i_cnt - 1;
                 if (i_cnt == 1) begin
                     m_inst_axi_rvalid <= 1;
-                    // 【核心修改】减去 0x4000_0000 基地址，再映射到 imem 数组
                     if (((m_inst_axi_araddr - 32'h4000_0000) >> 2) < IMEM_WORDS)
                         m_inst_axi_rdata <= imem[(m_inst_axi_araddr - 32'h4000_0000) >> 2];
                     else
@@ -139,7 +130,7 @@ module tb_rv_pl_axi;
         end
     end
 
-    // 2. Data Memory 状态机
+    //Data memory state machine
     integer d_r_cnt, d_b_cnt;
     reg [31:0] awaddr_latch;
     reg aw_done, w_done;
@@ -159,7 +150,7 @@ module tb_rv_pl_axi;
             aw_done <= 0;
             w_done  <= 0;
         end else begin
-            // --- 读通道 (保持不变) ---
+            //Read channel
             if (m_data_axi_rvalid && m_data_axi_rready) m_data_axi_rvalid <= 0;
             if (m_data_axi_arvalid && !m_data_axi_arready && !m_data_axi_rvalid && d_r_cnt == 0) begin
                 m_data_axi_arready <= 1;
@@ -178,10 +169,10 @@ module tb_rv_pl_axi;
                 end
             end
 
-            // --- 写通道 (全新重构，解耦 AW 和 W 通道) ---
+            //Write channel
             if (m_data_axi_bvalid && m_data_axi_bready) m_data_axi_bvalid <= 0;
             
-            // 独立接收地址 (AW Channel)
+            //AW channel
             if (m_data_axi_awvalid && !m_data_axi_awready && !aw_done) begin
                 m_data_axi_awready <= 1;
                 awaddr_latch <= m_data_axi_awaddr;
@@ -190,10 +181,10 @@ module tb_rv_pl_axi;
                 aw_done <= 1;
             end
 
-            // 独立接收数据 (W Channel) 并执行写入
+            //W channel
             if (m_data_axi_wvalid && !m_data_axi_wready && !w_done) begin
                 m_data_axi_wready <= 1;
-                // 确保地址落在 DMEM 范围内才执行写入
+                //Ensure correct address location
                 if (((aw_done ? awaddr_latch : m_data_axi_awaddr) - DMEM_BASE) >> 2 < DMEM_WORDS) begin
                      dmem[((aw_done ? awaddr_latch : m_data_axi_awaddr) - DMEM_BASE) >> 2] <= m_data_axi_wdata;
                 end
@@ -202,24 +193,22 @@ module tb_rv_pl_axi;
                 w_done <= 1;
             end
 
-            // 生成 B 响应 (等到地址和数据都收到后)
+            //Recall B
             if (aw_done && w_done && d_b_cnt == 0 && !m_data_axi_bvalid) begin
-                d_b_cnt <= MEM_LATENCY; // 模拟写响应延迟
+                d_b_cnt <= MEM_LATENCY; //Simulate delay writing
             end
             
             if (d_b_cnt > 0) begin
                 d_b_cnt <= d_b_cnt - 1;
                 if (d_b_cnt == 1) begin
                     m_data_axi_bvalid <= 1;
-                    aw_done <= 0; // 重置状态，准备下一次握手
+                    aw_done <= 0; //Reset, wait for next handshake
                     w_done  <= 0;
                 end
             end
         end
     end
-    // -------------------------
-    // Bubble sort result check
-    // -------------------------
+    //Result check
     localparam DATA_BASE = 32'h4200_0000; 
     reg [31:0] expected [0:7];
     integer k;
@@ -263,11 +252,9 @@ module tb_rv_pl_axi;
         end
     endtask
 
-    // -------------------------
     // Instrumentation
-    // -------------------------
     always @(posedge clk) begin
-        // 这里需要加上 m_data_axi_awready 判断，因为写握手在 ready 阶段才真正发生
+        //m_data_axi_awready judgment, cuz handshake only happens at ready state
         if (m_data_axi_awvalid && m_data_axi_wvalid && m_data_axi_awready) begin
             if (m_data_axi_awaddr == DONE_ADDR) begin
                 $display("[TB] STORE to DONE_ADDR: data=%h time=%0t", m_data_axi_wdata, $time);
@@ -284,22 +271,18 @@ module tb_rv_pl_axi;
         end
     end
 
-    // -------------------------
     // Program load / reset / timeout
-    // -------------------------
     integer i;
     initial begin
         for (i=0;i<IMEM_WORDS;i=i+1) imem[i] = 32'h00000013;
         for (i=0;i<DMEM_WORDS;i=i+1) dmem[i] = 32'h0;
 
-        // 【请确保此处路径正确】
         $readmemh("bubble_sort.hex", imem);
 
         rst_n = 0;
         repeat(10) @(posedge clk);
         rst_n = 1;
 
-        // timeout 放宽一点，因为加入了 AXI 延迟，执行周期会变长
         repeat(100000) @(posedge clk);
         $display("[FAIL] timeout, done not asserted");
         $finish;

@@ -30,9 +30,7 @@ module rv_single_axi(
     wire [2:0] sel_ext; wire [1:0] sel_wb; wire [3:0] alu_ctrl;
     wire cpu_en;
 
-    // ==========================================
-    // 1. Instruction AXI FSM
-    // ==========================================
+    //AXI state machine
     localparam IF_REQ = 2'd0, IF_WAIT = 2'd1, IF_DONE = 2'd2;
     reg [1:0] if_state; reg [31:0] inst_latch;
 
@@ -55,9 +53,7 @@ module rv_single_axi(
     wire inst_waiting = (if_state != IF_DONE);
     assign Instr = (if_state == IF_DONE) ? inst_latch : 32'h00000013;
 
-    // ==========================================
-    // 2. Data AXI FSM
-    // ==========================================
+    // Data AXI state machine
     wire is_load = (sel_wb == `WB_MEM), is_store = MemWrite;
     wire mem_req = (if_state == IF_DONE) && (is_load || is_store); // 只有取指完成后才判断是否需要访存
 
@@ -94,9 +90,7 @@ module rv_single_axi(
     wire data_waiting = mem_req && (mem_state != MEM_DONE);
     assign Mem_Data = (mem_state == MEM_DONE) ? data_latch : 32'd0;
 
-    // ==========================================
-    // 3. 全局使能门控 & 完成信号
-    // ==========================================
+    // Done signal
     assign cpu_en = !(inst_waiting || data_waiting);
 
     always @(posedge clk or negedge rst_n) begin
@@ -106,9 +100,7 @@ module rv_single_axi(
         end
     end
 
-    // ==========================================
-    // 4. 单周期核心例化
-    // ==========================================
+    //Single cycle instanciate
     PC pc_inst(.clk(clk), .rst_n(rst_n), .en(cpu_en), .NPC(PC_Next), .PC_Current(PC_Current));
     NPC npc_inst(.PC(PC_Current), .PCSrc(PCSrc), .IMMEXT(Imm_Ext), .NPC(PC_Next));
     Register_File regfile_inst(.clk(clk), .rst_n(rst_n), .en(cpu_en), .WE(RegWrite), .A1(Instr[19:15]), .A2(Instr[24:20]), .A3(Instr[11:7]), .WD(WD3), .RD1(RD1), .RD2(RD2));

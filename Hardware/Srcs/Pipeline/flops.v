@@ -37,9 +37,9 @@ module flopenclr #(parameter WIDTH = 8)
   always @(posedge clk or negedge rst_n) begin
     if (!rst_n) 
         q <= 0;
-    else if (en) begin      // 【修复】只有在未被冻结 (en=1) 时，才允许状态变化
-        if (clr) q <= 0;    // 允许冲刷
-        else     q <= d;    // 允许传值
+    else if (en) begin      //State changing only when not freezing
+        if (clr) q <= 0;    // Flush signal
+        else     q <= d;    // Pass signal
     end
   end
 endmodule

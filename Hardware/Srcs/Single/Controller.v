@@ -12,7 +12,7 @@ module Controller(
     output       PCSrc,         
     output [3:0] alu_control    
 );
-    wire [2:0] ALUOp; // 【修复】位宽改为3位
+    wire [2:0] ALUOp; //Change to three digits
     Op_Decoder main_decoder (
         .Zero(Zero), .Op(Op), .rf_we(rf_we), .sel_ext(sel_ext), .sel_alu_src_b(sel_alu_src_b),
         .dmem_we(dmem_we), .sel_result(sel_result), .PCSrc(PCSrc), .ALUOp(ALUOp)

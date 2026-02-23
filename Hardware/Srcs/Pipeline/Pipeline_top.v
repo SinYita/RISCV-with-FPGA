@@ -1,9 +1,7 @@
 `include "define.v"
 
 module rv_pl(
-    // ============================================================
-    // 0. 时钟与复位 
-    // ============================================================
+    // clk and reset
     (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
     (* X_INTERFACE_PARAMETER = "ASSOCIATED_BUSIF M_INST_AXI:M_DATA_AXI, ASSOCIATED_RESET rst_n" *)
     input  wire        clk,
@@ -11,9 +9,7 @@ module rv_pl(
     (* X_INTERFACE_PARAMETER = "POLARITY ACTIVE_LOW" *)
     input  wire        rst_n,
 
-    // ============================================================
-    // 1. AXI4-Lite Instruction Master (取指 - 只读)
-    // ============================================================
+    // AXI4-lite
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_INST_AXI ARADDR" *)  output wire [31:0] m_inst_axi_araddr,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_INST_AXI ARVALID" *) output wire        m_inst_axi_arvalid,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_INST_AXI ARREADY" *) input  wire        m_inst_axi_arready,
@@ -23,10 +19,7 @@ module rv_pl(
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_INST_AXI RREADY" *)  output wire        m_inst_axi_rready,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_INST_AXI ARPROT" *)  output wire [2:0]  m_inst_axi_arprot,
 
-    // ============================================================
-    // 2. AXI4-Lite Data Master (访存 - 读写)
-    // ============================================================
-    // 写通道
+    // AXI4-lite data master
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI AWADDR" *)  output wire [31:0] m_data_axi_awaddr,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI AWVALID" *) output wire        m_data_axi_awvalid,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI AWREADY" *) input  wire        m_data_axi_awready,
@@ -37,7 +30,7 @@ module rv_pl(
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI BRESP" *)   input  wire [1:0]  m_data_axi_bresp,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI BVALID" *)  input  wire        m_data_axi_bvalid,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI BREADY" *)  output wire        m_data_axi_bready,
-    // 读通道
+    // read channel
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI ARADDR" *)  output wire [31:0] m_data_axi_araddr,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI ARVALID" *) output wire        m_data_axi_arvalid,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI ARREADY" *) input  wire        m_data_axi_arready,
@@ -48,13 +41,10 @@ module rv_pl(
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI ARPROT" *)  output wire [2:0]  m_data_axi_arprot,
     (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_DATA_AXI AWPROT" *)  output wire [2:0]  m_data_axi_awprot,
 
-    // ============================================================
-    // 3. 物理引脚信号
-    // ============================================================
+    // physical signal
     output reg         done
 );
 
-    // --- 内部流水线信号 ---
     wire [31:0] F_pc, F_instr, D_instr, D_rf_rd1, D_rf_rd2, W_result, M_alu_o, M_rf_wd, M_dm_rd;
     wire [4:0]  D_rf_a1, D_rf_a2, E_rf_a1, E_rf_a2, E_rf_a3, M_rf_a3, W_rf_a3;
     wire [3:0]  E_alu_control;
@@ -63,14 +53,10 @@ module rv_pl(
     wire        E_pcsrc, E_sel_alu_src_b, E_we_rf, M_we_rf, M_we_dm, W_we_rf, ZeroE;
     wire        F_stall, D_flush, D_stall, E_flush;
 
-    // ============================================================
-    // 4. AXI4-Lite 状态机与握手逻辑
-    // ============================================================
+    //AXI4-lite handshake logic
     wire axi_stall; 
 
-    // ------------------------------------------------------------
-    // 4.1 取指 (Instruction Fetch) 状态机
-    // ------------------------------------------------------------
+    // Instruction fetch
     localparam IF_REQ   = 2'd0;
     localparam IF_WAIT  = 2'd1;
     localparam IF_DONE  = 2'd2; 
@@ -119,9 +105,7 @@ module rv_pl(
     wire inst_waiting = (if_state == IF_REQ) || (if_state == IF_WAIT && !m_inst_axi_rvalid);
     assign F_instr = (if_state == IF_WAIT && m_inst_axi_rvalid) ? m_inst_axi_rdata : inst_latch;
 
-    // ------------------------------------------------------------
-    // 4.2 访存 (Data Memory) 状态机
-    // ------------------------------------------------------------
+    // Access memory
     localparam MEM_IDLE  = 3'd0;
     localparam MEM_WADDR = 3'd1;
     localparam MEM_WDATA = 3'd2;
@@ -191,14 +175,10 @@ module rv_pl(
     
     assign M_dm_rd = (mem_state == MEM_RDATA && m_data_axi_rvalid) ? m_data_axi_rdata : data_latch;
 
-    // ------------------------------------------------------------
-    // 4.3 综合全局 AXI 停顿信号
-    // ------------------------------------------------------------
+    // Hybrid global pause signal
     assign axi_stall = inst_waiting || data_waiting;
 
-    // ============================================================
-    // 5. 核心逻辑判定 (Done Flag)
-    // ============================================================
+    // Done flag
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             done <= 1'b0;
@@ -208,9 +188,7 @@ module rv_pl(
         end
     end
 
-    // ============================================================
-    // 6. 核心数据通路实例化
-    // ============================================================
+    // Core implementation
     Register_File RF (
         .clk(clk),            
         .rst_n(rst_n), 

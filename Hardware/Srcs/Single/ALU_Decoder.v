@@ -1,6 +1,6 @@
 `include "define.v"
 module ALU_Decoder(
-    input  [2:0] ALUOp,   // 【修复】改为3位
+    input  [2:0] ALUOp,   //Change to three digits
     input  [2:0] funct3,
     input  [6:0] funct7,
     output reg [3:0] alu_control
@@ -35,7 +35,7 @@ module ALU_Decoder(
                 endcase
             end
             3'b011: alu_control = `ALU_COPY_B; 
-            3'b100: alu_control = `ALU_SUB; // 【修复】BEQ 强制做减法比较
+            3'b100: alu_control = `ALU_SUB; //Force to do deduction comparison
             default: alu_control = `ALU_NONE;
         endcase
     end

@@ -10,7 +10,7 @@ module Register_File(clk, rst_n, en, WE, WD, A1, A2, A3, RD1, RD2);
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             for(i = 0; i < 32; i = i + 1) Register[i] <= 32'd0;
-        end else if (en && WE && A3 != 5'd0) begin // 只有在总线准备好时才写入
+        end else if (en && WE && A3 != 5'd0) begin //Write only when ready
             Register[A3] <= WD; 
         end
     end

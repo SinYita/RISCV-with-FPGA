@@ -8,7 +8,7 @@ module Op_Decoder(
     output reg       dmem_we,        
     output reg [1:0] sel_result,     
     output reg       PCSrc,          
-    output reg [2:0] ALUOp // 【修复】改为3位
+    output reg [2:0] ALUOp //Change to three digits
 );
     always @* begin
         rf_we = `NO; sel_ext = `Ext_ImmI; sel_alu_src_b = `ALU_REG; dmem_we = 1'b0;

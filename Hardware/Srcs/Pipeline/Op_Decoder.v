@@ -13,7 +13,6 @@ module Op_Decoder(
 );
 
     always @* begin
-        // Default values
         RegWrite   = `NO;
         ImmSrc     = `Ext_ImmI;
         ALUSrc     = `ALU_REG;
@@ -57,7 +56,7 @@ module Op_Decoder(
                 Jump       = 1'b0;
             end
 
-            `OPCODE_ITP: begin // I-type Arithmetic
+            `OPCODE_ITP: begin // I-type
                 RegWrite   = `YES;
                 ImmSrc     = `Ext_ImmI;
                 ALUSrc     = `ALU_IMM;
