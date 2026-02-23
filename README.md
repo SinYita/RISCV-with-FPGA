@@ -1,113 +1,95 @@
-RISC-V FPGA Project
-================================
+# RISCV-with-FPGA
 
-This project implements a RISC-V processor on FPGA using Vivado.
-The project is configured in reference mode, meaning Vivado directly
-references the RTL source code in the repository instead of copying it.
+This repository implements RISC-V CPU designs on FPGA and provides a complete flow from RTL design to simulation and board deployment.
 
---------------------------------------------------
-Current Status
---------------------------------------------------
+- Single-cycle CPU RTL
+- 5-stage pipelined CPU RTL
+- Vivado projects, testbenches, and generated bitstreams
 
-- RTL and testbench paths are synchronized and stable.
-- Vivado project opens correctly after git pull.(I hope)
-- Simulation environment runs successfully.
-- Smoke test currently FAILS and is left for further debugging.
+It is intended for course projects and architecture experiments, making it easy to validate functionality, run synthesis/implementation, and test on hardware.
 
-The project structure and toolchain setup are complete.
-Remaining work is limited to RTL-level debugging.
+---
 
---------------------------------------------------
-Single Source of Truth (IMPORTANT)
---------------------------------------------------
+## Project Overview
 
-The authoritative RTL source is:
+This project explores how a RISC-V processor is built and verified in a practical FPGA workflow:
 
-    RISCV-source/
+- Design core datapath/control logic in Verilog
+- Compare single-cycle and pipelined microarchitectures
+- Verify behavior with simulation testbenches
+- Build Vivado projects for implementation
+- Export `bit`/`hwh` files for FPGA deployment
 
-And for testbench:
+In short, this repo is a full-stack educational hardware project that covers CPU design, verification, and deployment.
 
-    testbench_v
+---
 
-Vivado references these directory directly.
+## Project Structure
 
-Do NOT edit RTL files under:
-    vivado-p/.../imports/
+```text
+RISCV-with-FPGA/
+├── README.md
+├── Bitstream/
+│   ├── pipeline/
+│   │   ├── design.bit
+│   │   └── design.hwh
+│   └── single_cycle/
+│       ├── design_single.bit
+│       └── design_single.hwh
+├── Hardware/
+│   ├── Srcs/
+│   │   ├── Pipeline/
+│   │   │   ├── ALU.v
+│   │   │   ├── Controller.v
+│   │   │   ├── Datapath.v
+│   │   │   ├── Hazard_Unit.v
+│   │   │   ├── Pipeline_top.v
+│   │   │   └── ...
+│   │   └── Single/
+│   │       ├── ALU.v
+│   │       ├── Controller.v
+│   │       ├── rv_sc.v
+│   │       └── ...
+│   ├── Testbench/
+│   │   ├── rv_sc_tb.v
+│   │   └── tb_rv_pl.v
+│   └── Vivado/
+│       ├── rv_sc/
+│       │   └── rv_sc.xpr
+│       └── Test/
+│           └── Test.xpr
+├── Software/
+│   └── bubble_sort.s
+└── Verification/
+    └── verify.ipynb
+```
 
-If RTL changes are needed:
-1. Modify files in RISCV-source/
-2. Re-run simulation or synthesis in Vivado
+---
 
---------------------------------------------------
-Project Structure
---------------------------------------------------
+## Directory Guide
 
-RISCV-source/
-    RISC-V RTL source code
+- `Hardware/Srcs/Pipeline/`: Core RTL source files for the pipelined CPU
+- `Hardware/Srcs/Single/`: Core RTL source files for the single-cycle CPU
+- `Hardware/Testbench/`: Simulation testbenches
+- `Hardware/Vivado/`: Vivado project files (`.xpr`)
+- `Bitstream/`: Generated `bit`/`hwh` files for hardware deployment
+- `Software/`: Assembly test programs
+- `Verification/`: Notebook-based verification scripts
 
-    - rv_pl.v
-    - alu.v
-    - controller.v
-    - hazard_unit.v
-    - register_file.v
-    - sign_extender.v
+---
 
-testbench_v/
+## Quick Start
 
-    Simulation testbench and programs
+1. Open the Vivado projects:
+    - `Hardware/Vivado/rv_sc/rv_sc.xpr` (single-cycle related)
+    - `Hardware/Vivado/Test/Test.xpr` (test/integration related)
+2. Run Simulation and/or Synthesis/Implementation as needed.
+3. For board deployment, use the corresponding `bit` and `hwh` files under `Bitstream/`.
 
-    - tb_rv_pl.v
-    - smoke_done.hex
+---
 
-vivado-p/
+## Development Notes
 
-    Vivado project directory
-
-    - riscv-fpga.xpr
-    - riscv-fpga.srcs/
-
---------------------------------------------------
-Vivado Version
---------------------------------------------------
-
-Tested with Vivado 2021.2
-Behavioral simulation uses XSim.
-
---------------------------------------------------
-How to Open the Project
---------------------------------------------------
-
-1. Clone the repository.
-2. Open Vivado 2021.2.
-3. Open the project file:
-
-    vivado-p/riscv-fpga.xpr
-
-4. If prompted, generate IP or block design output products.
-
---------------------------------------------------
-Simulation Notes
---------------------------------------------------
-
-- Testbench: testbench_v/tb_rv_pl.v
-- Program:   testbench_v/smoke_done.hex
-
-Simulation currently runs but does not pass the smoke test.
-Debugging should focus on RTL logic, not project configuration.(should be so)
-
---------------------------------------------------
-Notes for Contributors
---------------------------------------------------
-
-- The project uses reference paths; keep directory structure unchanged.
-- Do not commit Vivado-generated folders such as .runs, .sim, or .cache.
-- Focus debugging efforts on RISCV-source/.
-
---------------------------------------------------
-Handoff Note
---------------------------------------------------
-
-Environment setup, source synchronization, and project structure
-have been completed.
-
-Further work is expected to be standard RTL debugging.
+- Make RTL changes primarily under `Hardware/Srcs/`.
+- Start debugging from `Hardware/Testbench/` when simulation mismatches occur.
+- Keep the directory structure stable and avoid committing irrelevant tool-generated cache artifacts.
